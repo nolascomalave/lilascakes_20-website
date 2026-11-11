@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lila's Cakes — Maqueta Home</title>
+  <meta name="description" content="Maqueta visual de la Home de Lila's Cakes. Estilo Editorial Cálido / Retro-Chic." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#FFF8F6",
+            rosa: { soft: "#F4B6C2", intense: "#F73E85" },
+            chocolate: { DEFAULT: "#4A2B23", soft: "#6B4A41" },
+            gris: "#D1D3D4",
+          },
+          fontFamily: {
+            sans: ["Montserrat", "sans-serif"],
+            script: ["Caveat", "cursive"],
+          },
+          boxShadow: {
+            soft: "0 24px 70px -30px rgba(74, 43, 35, 0.45)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #fff8f6;
+    }
+    .grain {
+      background-image: radial-gradient(rgba(74, 43, 35, 0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      animation: marquee 30s linear infinite;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-chocolate antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 border-b border-chocolate/10 bg-cream/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+      <a href="#" class="font-script text-4xl leading-none text-chocolate">
+        Lila's Cakes<span class="text-rosa-intense">.</span>
+      </a>
+
+      <nav class="hidden items-center gap-9 text-[11px] font-semibold uppercase tracking-[0.22em] md:flex">
+        <a href="#" class="relative text-chocolate">
+          Inicio
+          <span class="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-rosa-intense"></span>
+        </a>
+        <a href="#productos" class="text-chocolate/70 transition hover:text-rosa-intense">Catálogo</a>
+        <a href="#instagram" class="text-chocolate/70 transition hover:text-rosa-intense">Nosotros</a>
+        <a href="#contacto" class="text-chocolate/70 transition hover:text-rosa-intense">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a
+          href="#productos"
+          class="hidden rounded-full bg-chocolate px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-cream transition hover:bg-rosa-intense sm:inline-flex"
+        >
+          Haz tu pedido
+        </a>
+        <button
+          type="button"
+          aria-label="Abrir menú"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-chocolate/20 text-chocolate md:hidden"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="relative overflow-hidden">
+      <div class="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-rosa-soft/30 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-gris/30 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-6 pb-20 pt-14 md:grid-cols-2 md:pb-28 md:pt-20">
+        <!-- Texto -->
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-chocolate/20 bg-white/70 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em]">
+            <span class="h-1.5 w-1.5 rounded-full bg-rosa-intense"></span>
+            Hecho a mano · desde 2018
+          </span>
+
+          <h1 class="mt-7 text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
+            Cada bocado,
+            <br />
+            <span class="font-script text-6xl font-semibold leading-[0.9] text-rosa-intense sm:text-7xl lg:text-[5.5rem]">
+              un recuerdo
+            </span>
+          </h1>
+
+          <p class="mt-7 max-w-md text-base leading-relaxed text-chocolate/70 sm:text-lg">
+            Repostería artesanal horneada cada mañana con ingredientes frescos,
+            recetas de familia y mucho cariño. Del horno a tu mesa.
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a
+              href="#productos"
+              class="inline-flex items-center gap-2 rounded-full bg-rosa-intense px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-chocolate"
+            >
+              Ver catálogo
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a
+              href="#contacto"
+              class="inline-flex items-center gap-2 rounded-full border border-chocolate/25 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-chocolate transition hover:border-rosa-intense hover:text-rosa-intense"
+            >
+              Contáctanos
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center gap-4">
+            <div class="flex items-center gap-1 text-rosa-intense">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.3l6.5-.9z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.3l6.5-.9z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.3l6.5-.9z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.3l6.5-.9z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.3l6.5-.9z"/></svg>
+            </div>
+            <p class="text-xs font-medium uppercase tracking-[0.14em] text-chocolate/60">
+              4.9/5 · +1.200 pedidos felices
+            </p>
+          </div>
+        </div>
+
+        <!-- Imagen / ilustración -->
+        <div class="relative mx-auto w-full max-w-md">
+          <div class="absolute -inset-6 rounded-full bg-rosa-soft/40 blur-3xl"></div>
+
+          <div class="relative aspect-[4/5] overflow-hidden rounded-t-[14rem] rounded-b-[3rem] border border-white/70 bg-gradient-to-b from-rosa-soft via-[#F7CDD6] to-[#FBE3E7] shadow-soft">
+            <!-- Ilustración de tarta (placeholder ilustrado) -->
+            <svg viewBox="0 0 320 400" class="h-full w-full" fill="none" aria-hidden="true">
+              <ellipse cx="160" cy="352" rx="104" ry="13" fill="#4A2B23" opacity="0.16" />
+              <path d="M136 330h48l7 22h-62z" fill="#4A2B23" opacity="0.9" />
+              <ellipse cx="160" cy="330" rx="76" ry="11" fill="#4A2B23" opacity="0.9" />
+
+              <!-- Piso inferior -->
+              <rect x="70" y="252" width="180" height="80" rx="26" fill="#F73E85" />
+              <rect x="70" y="252" width="180" height="26" rx="13" fill="#FFF1F4" />
+              <!-- Piso medio -->
+              <rect x="96" y="186" width="128" height="72" rx="22" fill="#F4B6C2" />
+              <rect x="96" y="186" width="128" height="22" rx="11" fill="#FFF8F6" />
+              <!-- Piso superior -->
+              <rect x="120" y="132" width="80" height="60" rx="18" fill="#4A2B23" />
+              <rect x="120" y="132" width="80" height="18" rx="9" fill="#FFF1F4" />
+
+              <!-- Cereza -->
+              <circle cx="160" cy="118" r="12" fill="#F73E85" />
+              <path d="M160 106c4-10 12-14 20-15" stroke="#4A2B23" stroke-width="3" stroke-linecap="round" />
+
+              <!-- Sprinkles -->
+              <g fill="#FFF8F6" opacity="0.92">
+                <rect x="100" y="212" width="12" height="4" rx="2" transform="rotate(-18 100 212)" />
+                <rect x="150" y="222" width="12" height="4" rx="2" transform="rotate(12 150 222)" />
+                <rect x="190" y="208" width="12" height="4" rx="2" transform="rotate(-8 190 208)" />
+                <rect x="88" y="292" width="14" height="5" rx="2.5" transform="rotate(-14 88 292)" />
+                <rect x="140" y="306" width="14" height="5" rx="2.5" transform="rotate(10 140 306)" />
+                <rect x="200" y="288" width="14" height="5" rx="2.5" transform="rotate(-6 200 288)" />
+              </g>
+              <g fill="#4A2B23" opacity="0.55">
+                <rect x="130" y="160" width="10" height="4" rx="2" transform="rotate(14 130 160)" />
+                <rect x="172" y="170" width="10" height="4" rx="2" transform="rotate(-16 172 170)" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Stickers retro -->
+          <div class="absolute -left-5 top-12 rotate-[-11deg] rounded-2xl border border-dashed border-chocolate/30 bg-cream px-4 py-2 font-script text-2xl leading-none shadow-soft">
+            100% artesanal
+          </div>
+          <div class="absolute -right-4 bottom-14 rotate-[8deg] rounded-full bg-chocolate px-5 py-3 text-center shadow-soft">
+            <p class="font-script text-2xl leading-none text-cream">¡Delicioso!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE RETRO ===================== -->
+    <div class="overflow-hidden border-y border-chocolate/10 bg-rosa-intense py-3 text-white">
+      <div class="marquee-track flex w-max items-center gap-10 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.34em]">
+        <span>Horneado a diario</span><span class="text-rosa-soft">✦</span>
+        <span>Ingredientes frescos</span><span class="text-rosa-soft">✦</span>
+        <span>Hecho con amor</span><span class="text-rosa-soft">✦</span>
+        <span>Sin conservantes</span><span class="text-rosa-soft">✦</span>
+        <span>Pedidos personalizados</span><span class="text-rosa-soft">✦</span>
+        <!-- duplicado para bucle continuo -->
+        <span>Horneado a diario</span><span class="text-rosa-soft">✦</span>
+        <span>Ingredientes frescos</span><span class="text-rosa-soft">✦</span>
+        <span>Hecho con amor</span><span class="text-rosa-soft">✦</span>
+        <span>Sin conservantes</span><span class="text-rosa-soft">✦</span>
+        <span>Pedidos personalizados</span><span class="text-rosa-soft">✦</span>
+      </div>
+    </div>
+
+    <!-- ===================== PRODUCTOS DESTACADOS ===================== -->
+    <section id="productos" class="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-script text-3xl text-rosa-intense">Favoritos de la casa</p>
+          <h2 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Productos destacados</h2>
+        </div>
+        <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-chocolate/70 transition hover:text-rosa-intense">
+          Ver todo
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Producto 1 -->
+        <article class="group">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#FBDDE3] via-[#F4B6C2] to-[#E9A3B2]">
+            <span class="absolute left-4 top-4 z-10 rounded-full bg-cream/95 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-chocolate">
+              Temporada
+            </span>
+            <img
+              src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80"
+              alt="Tarta de fresas artesanal"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-x-4 bottom-4 translate-y-2 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <button class="w-full rounded-full bg-chocolate py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-cream transition hover:bg-rosa-intense">
+                Añadir al pedido
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold">Tarta de Fresas</h3>
+              <p class="mt-1 text-sm leading-snug text-chocolate/60">Bizcocho de vainilla y fresas frescas</p>
+            </div>
+            <p class="font-script text-3xl leading-none text-rosa-intense">$28</p>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="group">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F9E7D8] via-[#F2CFB9] to-[#E0B09B]">
+            <span class="absolute left-4 top-4 z-10 rounded-full bg-cream/95 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-chocolate">
+              Favorito
+            </span>
+            <img
+              src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80"
+              alt="Cheesecake de maracuyá"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-x-4 bottom-4 translate-y-2 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <button class="w-full rounded-full bg-chocolate py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-cream transition hover:bg-rosa-intense">
+                Añadir al pedido
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold">Cheesecake de Maracuyá</h3>
+              <p class="mt-1 text-sm leading-snug text-chocolate/60">Base crujiente y coulis tropical</p>
+            </div>
+            <p class="font-script text-3xl leading-none text-rosa-intense">$26</p>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="group">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#D8B7AC] via-[#B98F80] to-[#8E6355]">
+            <span class="absolute left-4 top-4 z-10 rounded-full bg-cream/95 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-chocolate">
+              Sin gluten
+            </span>
+            <img
+              src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80"
+              alt="Brownie de chocolate"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-x-4 bottom-4 translate-y-2 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <button class="w-full rounded-full bg-cream py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-chocolate transition hover:bg-rosa-intense hover:text-white">
+                Añadir al pedido
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold">Brownie Intenso</h3>
+              <p class="mt-1 text-sm leading-snug text-chocolate/60">Chocolate 70% y nueces tostadas</p>
+            </div>
+            <p class="font-script text-3xl leading-none text-rosa-intense">$12</p>
+          </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="group">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F6C9D3] via-[#D98BA4] to-[#7E3F53]">
+            <span class="absolute left-4 top-4 z-10 rounded-full bg-cream/95 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-chocolate">
+              Vegana
+            </span>
+            <img
+              src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+              alt="Tarta de chocolate"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-x-4 bottom-4 translate-y-2 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <button class="w-full rounded-full bg-chocolate py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-cream transition hover:bg-rosa-intense">
+                Añadir al pedido
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold">Tarta de Chocolate</h3>
+              <p class="mt-1 text-sm leading-snug text-chocolate/60">Ganache sedosa y flor de sal</p>
+            </div>
+            <p class="font-script text-3xl leading-none text-rosa-intense">$30</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section id="instagram" class="grain border-y border-chocolate/10 bg-rosa-soft/25 py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center">
+          <p class="font-script text-3xl text-rosa-intense">Comparte el momento</p>
+          <h2 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Síguenos en Instagram</h2>
+          <p class="mt-4 text-sm text-chocolate/60">
+            @lilascakes · historias, recetas y lo que sale del horno cada día
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <!-- Tile 1 -->
+          <a href="#" class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#FBDDE3] to-[#F4B6C2]">
+            <img
+              src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=700&q=80"
+              alt="Cupcakes artesanales"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-chocolate/70 opacity-0 transition group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-cream" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-cream">Ver post</span>
+            </div>
+          </a>
+          <!-- Tile 2 -->
+          <a href="#" class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#F9E7D8] to-[#E7B79E]">
+            <img
+              src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=700&q=80"
+              alt="Tarta de celebración"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-chocolate/70 opacity-0 transition group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-cream" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-cream">Ver post</span>
+            </div>
+          </a>
+          <!-- Tile 3 -->
+          <a href="#" class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#D8B7AC] to-[#8E6355]">
+            <img
+              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=700&q=80"
+              alt="Bollería artesanal"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-chocolate/70 opacity-0 transition group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-cream" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-cream">Ver post</span>
+            </div>
+          </a>
+          <!-- Tile 4 -->
+          <a href="#" class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#F6C9D3] to-[#C97C93]">
+            <img
+              src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=700&q=80"
+              alt="Tarta con flores"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-chocolate/70 opacity-0 transition group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-cream" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-cream">Ver post</span>
+            </div>
+          </a>
+          <!-- Tile 5 -->
+          <a href="#" class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#EFE3D6] to-[#C9A98C]">
+            <img
+              src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=700&q=80"
+              alt="Detalle de repostería"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-chocolate/70 opacity-0 transition group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-cream" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-cream">Ver post</span>
+            </div>
+          </a>
+          <!-- Tile 6 -->
+          <a href="#" class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#F7D9DE] to-[#DF8FA4]">
+            <img
+              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=700&q=80"
+              alt="Tarta de frutos rojos"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-chocolate/70 opacity-0 transition group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-cream" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-cream">Ver post</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="mt-11 text-center">
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 rounded-full bg-chocolate px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-cream transition hover:bg-rosa-intense"
+          >
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+            Seguir @lilascakes
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="contacto" class="bg-chocolate text-cream">
+    <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div class="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div>
+          <p class="font-script text-5xl leading-none">Lila's Cakes</p>
+          <p class="mt-5 max-w-xs text-sm leading-relaxed text-cream/70">
+            Pastelería artesanal. Repostería fresca, recetas de familia y
+            detalles hechos a mano para tus momentos especiales.
+          </p>
+
+          <div class="mt-7 flex items-center gap-3">
+            <a href="#" aria-label="Instagram" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream/80 transition hover:border-rosa-soft hover:text-rosa-soft">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream/80 transition hover:border-rosa-soft hover:text-rosa-soft">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M14 8.5V7c0-.6.4-1 1-1h2V3.5h-2.5C12 3.5 10.5 5 10.5 7v1.5H8V11h2.5v9H14v-9h2.6l.4-2.5H14z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream/80 transition hover:border-rosa-soft hover:text-rosa-soft">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M16.5 3.5c.4 2.2 1.8 3.7 4 4v2.8c-1.5 0-2.9-.5-4-1.3v5.9c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.4 0 .7 0 1 .1v3c-.3-.1-.7-.2-1-.2-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V3.5h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-rosa-soft">Explorar</p>
+          <ul class="mt-5 space-y-3 text-sm text-cream/70">
+            <li><a href="#" class="transition hover:text-cream">Inicio</a></li>
+            <li><a href="#productos" class="transition hover:text-cream">Catálogo</a></li>
+            <li><a href="#" class="transition hover:text-cream">Nosotros</a></li>
+            <li><a href="#contacto" class="transition hover:text-cream">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-rosa-soft">Contacto</p>
+          <ul class="mt-5 space-y-3 text-sm text-cream/70">
+            <li><a href="mailto:hola@lilas-cakes.com" class="transition hover:text-cream">hola@lilas-cakes.com</a></li>
+            <li>+34 600 000 000</li>
+            <li>Calle del Horno, 12<br />Madrid, España</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-rosa-soft">Horario</p>
+          <ul class="mt-5 space-y-3 text-sm text-cream/70">
+            <li>Lun – Vie · 9:00 – 20:00</li>
+            <li>Sábado · 10:00 – 14:00</li>
+            <li>Domingo · cerrado</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col gap-3 border-t border-cream/20 pt-6 text-[11px] uppercase tracking-[0.14em] text-cream/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Lila's Cakes. Todos los derechos reservados.</p>
+        <p class="normal-case tracking-normal">Maqueta visual — hecha con ♥ para el cliente</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

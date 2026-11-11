@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lila's Cakes — Home Boutique Parisina (v5)</title>
+  <meta name="description" content="Maqueta visual v5 de la Home de Lila's Cakes. Boutique Parisina: simetría, verde bosque y oro." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: "#FDFBF7",
+            forest: "#1A302B",
+            charcoal: "#1C1C1C",
+            gold: "#C9A75B",
+            blush: "#E5B2B8",
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', "serif"],
+            sans: ["Jost", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #fdfbf7;
+    }
+    /* Fundo suave si una imagen de Unsplash no carga */
+    .img-fallback {
+      background-image: linear-gradient(135deg, #efe9dc 0%, #e6dcc8 60%, #d9c9a8 100%);
+    }
+    ::selection {
+      background-color: #e5b2b8;
+      color: #1c1c1c;
+    }
+  </style>
+</head>
+
+<body class="bg-ivory font-sans font-light text-charcoal antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="border-b border-gold/30 bg-ivory">
+    <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
+
+      <!-- Escritorio: tres bloques simétricos -->
+      <div class="hidden items-center gap-6 py-6 md:grid md:grid-cols-[1fr_auto_1fr]">
+        <nav class="flex items-center gap-8 text-[9px] font-medium uppercase tracking-[0.32em] text-charcoal/60">
+          <a href="#coleccion" class="transition hover:text-gold">Colección</a>
+          <a href="#filosofia" class="transition hover:text-gold">Filosofía</a>
+        </nav>
+
+        <a href="#" class="justify-self-center text-center">
+          <span class="block font-serif text-3xl leading-none tracking-wide text-charcoal">Lila's Cakes</span>
+          <span class="mt-2 block text-[7px] uppercase tracking-[0.5em] text-gold">Pâtisserie · Madrid</span>
+        </a>
+
+        <div class="flex items-center justify-self-end gap-8">
+          <nav class="flex items-center gap-8 text-[9px] font-medium uppercase tracking-[0.32em] text-charcoal/60">
+            <a href="#instagram" class="transition hover:text-gold">Instagram</a>
+            <a href="#contacto" class="transition hover:text-gold">Contacto</a>
+          </nav>
+          <a
+            href="#coleccion"
+            class="border border-gold px-5 py-2.5 text-[8px] font-medium uppercase tracking-[0.32em] text-charcoal transition hover:bg-gold hover:text-ivory"
+          >
+            Pedir online
+          </a>
+        </div>
+      </div>
+
+      <!-- Móvil -->
+      <div class="flex items-center justify-between py-4 md:hidden">
+        <a href="#" class="text-center">
+          <span class="block font-serif text-2xl leading-none tracking-wide">Lila's Cakes</span>
+          <span class="mt-1 block text-[7px] uppercase tracking-[0.42em] text-gold">Pâtisserie · Madrid</span>
+        </a>
+        <div class="flex items-center gap-3">
+          <a href="#coleccion" class="border border-gold px-3 py-2 text-[8px] uppercase tracking-[0.24em] text-charcoal">Pedir</a>
+          <button type="button" aria-label="Abrir menú" class="p-1 text-charcoal/70">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-5 w-5">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="border-b border-gold/20">
+      <div class="mx-auto grid max-w-[1400px] lg:grid-cols-2">
+
+        <!-- Texto -->
+        <div class="flex flex-col justify-center px-6 py-16 sm:px-10 lg:px-14 lg:py-24 xl:px-20">
+          <p class="text-[9px] font-medium uppercase tracking-[0.42em] text-gold">
+            Maison de pâtisserie · desde 2018
+          </p>
+
+          <h1 class="mt-7 font-serif text-6xl leading-[0.98] tracking-tight sm:text-7xl lg:text-[5.4rem]">
+            El arte de la
+            <br />
+            <em class="italic text-forest">pâtisserie</em>
+          </h1>
+
+          <!-- Ornamento Art-Deco -->
+          <div class="mt-8 flex items-center gap-3" aria-hidden="true">
+            <span class="h-px w-14 bg-gold/60"></span>
+            <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
+            <span class="h-px w-14 bg-gold/60"></span>
+          </div>
+
+          <p class="mt-8 max-w-md text-[14px] font-light leading-relaxed text-charcoal/60">
+            La elegancia de la pastelería francesa tradicional, elaborada a
+            mano cada mañana. Una colección clásica, sobria y delicada, pensada
+            para los momentos que merecen una mesa bien puesta.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-5">
+            <a
+              href="#coleccion"
+              class="inline-flex items-center gap-3 bg-blush px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.3em] text-charcoal transition hover:bg-gold hover:text-ivory"
+            >
+              Descubrir la colección
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-3 w-3">
+                <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a
+              href="#filosofia"
+              class="border border-gold/70 px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.3em] text-charcoal transition hover:border-gold hover:text-gold"
+            >
+              Nuestra historia
+            </a>
+          </div>
+
+          <div class="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-gold/30 pt-6 text-[8px] uppercase tracking-[0.28em] text-charcoal/50">
+            <span>Elaboración artesanal</span>
+            <span class="h-1 w-1 rotate-45 bg-gold"></span>
+            <span>Ingredientes de temporada</span>
+            <span class="h-1 w-1 rotate-45 bg-gold"></span>
+            <span>Envíos en Madrid</span>
+          </div>
+        </div>
+
+        <!-- Imagen enmarcada -->
+        <div class="px-6 pb-16 sm:px-10 lg:flex lg:flex-col lg:justify-center lg:px-10 lg:py-16 xl:px-14">
+          <div class="bg-white p-3 ring-1 ring-gold/30">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=80"
+                alt="Tarta clásica francesa de frutos rojos"
+                class="h-full w-full object-cover"
+                onerror="this.style.display='none'"
+              />
+            </div>
+          </div>
+          <p class="mt-4 text-right text-[8px] uppercase tracking-[0.3em] text-charcoal/40">
+            Tarte aux fruits rouges — Collection classique
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COLECCIÓN ===================== -->
+    <section id="coleccion" class="mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
+      <div class="text-center">
+        <p class="text-[9px] font-medium uppercase tracking-[0.42em] text-gold">La colección</p>
+        <h2 class="mt-4 font-serif text-5xl tracking-tight sm:text-6xl">Nuestros clásicos</h2>
+        <div class="mt-7 flex items-center justify-center gap-3" aria-hidden="true">
+          <span class="h-px w-14 bg-gold/60"></span>
+          <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
+          <span class="h-px w-14 bg-gold/60"></span>
+        </div>
+      </div>
+
+      <div class="mt-16 grid gap-y-14 sm:grid-cols-2 lg:grid-cols-3 lg:divide-x lg:divide-gold/30">
+
+        <!-- Producto 1 -->
+        <article class="lg:px-10 lg:pl-0">
+          <p class="text-[8px] font-medium uppercase tracking-[0.36em] text-gold">Nº 01</p>
+          <div class="img-fallback mt-4 aspect-[3/4] overflow-hidden border border-gold/20">
+            <img
+              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=80"
+              alt="Mille-feuille de vainilla"
+              class="h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-6 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-2xl tracking-tight">Mille-feuille</h3>
+            <p class="text-[11px] uppercase tracking-[0.2em] text-charcoal/60">€38</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Hojaldre caramelizado, crema de vainilla de Madagascar.
+          </p>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="sm:border-t sm:border-gold/20 sm:pt-10 lg:border-0 lg:px-10 lg:pt-0">
+          <p class="text-[8px] font-medium uppercase tracking-[0.36em] text-gold">Nº 02</p>
+          <div class="img-fallback mt-4 aspect-[3/4] overflow-hidden border border-gold/20">
+            <img
+              src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80"
+              alt="Tarta de frutos rojos"
+              class="h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-6 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-2xl tracking-tight">Tarte aux fruits rouges</h3>
+            <p class="text-[11px] uppercase tracking-[0.2em] text-charcoal/60">€42</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Masa sablée, crema de almendra y frutos rojos frescos.
+          </p>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="sm:border-t sm:border-gold/20 sm:pt-10 lg:border-0 lg:px-10 lg:pr-0 lg:pt-0">
+          <p class="text-[8px] font-medium uppercase tracking-[0.36em] text-gold">Nº 03</p>
+          <div class="img-fallback mt-4 aspect-[3/4] overflow-hidden border border-gold/20">
+            <img
+              src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+              alt="Éclair au chocolat"
+              class="h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-6 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-2xl tracking-tight">Éclair au chocolat</h3>
+            <p class="text-[11px] uppercase tracking-[0.2em] text-charcoal/60">€12</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Pasta choux, crema pastelera y ganache de cacao.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== FILOSOFÍA ===================== -->
+    <section id="filosofia" class="bg-forest">
+      <div class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10 lg:py-28">
+        <div class="border border-gold/60 px-8 py-16 text-center sm:px-16 lg:px-20 lg:py-20">
+
+          <p class="text-[9px] font-medium uppercase tracking-[0.42em] text-gold">Nuestra filosofía</p>
+
+          <div class="mt-7 flex items-center justify-center gap-3" aria-hidden="true">
+            <span class="h-px w-12 bg-gold/60"></span>
+            <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
+            <span class="h-px w-12 bg-gold/60"></span>
+          </div>
+
+          <blockquote class="mx-auto mt-9 max-w-3xl font-serif text-3xl italic leading-snug tracking-tight text-ivory sm:text-4xl lg:text-5xl">
+            «La tradición no se improvisa: se hereda, se cuida y se sirve.»
+          </blockquote>
+
+          <p class="mx-auto mt-9 max-w-2xl text-[13px] font-light leading-relaxed text-ivory/60">
+            Cada pieza se elabora en pequeñas tandas, con mantequilla francesa,
+            harinas seleccionadas y fruta de temporada. Sin atajos ni
+            conservantes: solo el tiempo que exige la alta pastelería.
+          </p>
+
+          <div class="mx-auto mt-9 h-px w-16 bg-gold/60"></div>
+
+          <p class="mt-7 font-serif text-lg italic text-gold">— Lila, fundadora</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section id="instagram" class="mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
+      <div class="text-center">
+        <p class="text-[9px] font-medium uppercase tracking-[0.42em] text-gold">@lilascakes</p>
+        <h2 class="mt-4 font-serif text-5xl tracking-tight sm:text-6xl">Síguenos en Instagram</h2>
+        <p class="mt-5 text-[13px] font-light text-charcoal/50">
+          El día a día del obrador, en imágenes.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <!-- Imagen 1 -->
+        <a href="#" class="group relative aspect-square overflow-hidden img-fallback">
+          <img
+            src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=800&q=80"
+            alt="Cupcakes artesanales"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-forest/60 opacity-0 transition duration-500 group-hover:opacity-100">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-ivory">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Imagen 2 -->
+        <a href="#" class="group relative aspect-square overflow-hidden img-fallback">
+          <img
+            src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80"
+            alt="Tarta de celebración"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-forest/60 opacity-0 transition duration-500 group-hover:opacity-100">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-ivory">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Imagen 3 -->
+        <a href="#" class="group relative aspect-square overflow-hidden img-fallback">
+          <img
+            src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80"
+            alt="Tarta con flores"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-forest/60 opacity-0 transition duration-500 group-hover:opacity-100">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-ivory">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Imagen 4 -->
+        <a href="#" class="group relative aspect-square overflow-hidden img-fallback">
+          <img
+            src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
+            alt="Detalle de chocolate"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-forest/60 opacity-0 transition duration-500 group-hover:opacity-100">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-ivory">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a
+          href="#"
+          class="inline-flex items-center gap-3 border border-gold px-8 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-charcoal transition hover:bg-gold hover:text-ivory"
+        >
+          Seguir @lilascakes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-3 w-3">
+            <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="contacto" class="border-t border-gold/40 bg-forest text-ivory">
+    <div class="mx-auto max-w-[1400px] px-6 py-16 lg:px-10 lg:py-20">
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Marca -->
+        <div>
+          <p class="font-serif text-3xl tracking-wide text-ivory">Lila's Cakes</p>
+          <p class="mt-2 text-[7px] uppercase tracking-[0.42em] text-gold">Pâtisserie · Madrid</p>
+          <p class="mt-5 max-w-xs text-[12px] font-light leading-relaxed text-ivory/60">
+            Pastelería francesa artesanal. Una colección clásica elaborada a
+            mano cada mañana.
+          </p>
+
+          <div class="mt-7 flex items-center gap-3">
+            <a href="#" aria-label="Instagram" class="inline-flex h-9 w-9 items-center justify-center border border-gold/50 text-gold/80 transition hover:border-gold hover:text-gold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="inline-flex h-9 w-9 items-center justify-center border border-gold/50 text-gold/80 transition hover:border-gold hover:text-gold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M14 8.5V7c0-.6.4-1 1-1h2V3.5h-2.5C12 3.5 10.5 5 10.5 7v1.5H8V11h2.5v9H14v-9h2.6l.4-2.5H14z"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="inline-flex h-9 w-9 items-center justify-center border border-gold/50 text-gold/80 transition hover:border-gold hover:text-gold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.2-1.8 0-2.6l1.2-4.9s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.6 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.1c0 .2-.2.3-.4.2-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.6-6.1 3.5 0 6.2 2.5 6.2 5.8 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 2-1.2 2.6A9 9 0 1 0 12 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- La Maison -->
+        <div>
+          <p class="text-[8px] font-medium uppercase tracking-[0.32em] text-gold">La Maison</p>
+          <ul class="mt-5 space-y-3 text-[12px] font-light text-ivory/60">
+            <li><a href="#" class="transition hover:text-ivory">Nuestra historia</a></li>
+            <li><a href="#" class="transition hover:text-ivory">El obrador</a></li>
+            <li><a href="#" class="transition hover:text-ivory">Prensa</a></li>
+            <li><a href="#" class="transition hover:text-ivory">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+        <!-- Colección -->
+        <div>
+          <p class="text-[8px] font-medium uppercase tracking-[0.32em] text-gold">Colección</p>
+          <ul class="mt-5 space-y-3 text-[12px] font-light text-ivory/60">
+            <li><a href="#coleccion" class="transition hover:text-ivory">Clásicos franceses</a></li>
+            <li><a href="#coleccion" class="transition hover:text-ivory">Tartas de fruta</a></li>
+            <li><a href="#coleccion" class="transition hover:text-ivory">Bollería</a></li>
+            <li><a href="#coleccion" class="transition hover:text-ivory">Ediciones limitadas</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <p class="text-[8px] font-medium uppercase tracking-[0.32em] text-gold">Contacto</p>
+          <ul class="mt-5 space-y-3 text-[12px] font-light text-ivory/60">
+            <li><a href="mailto:hola@lilas-cakes.com" class="transition hover:text-ivory">hola@lilas-cakes.com</a></li>
+            <li>+34 600 000 000</li>
+            <li>Calle del Horno, 12<br />Madrid, España</li>
+            <li class="pt-2 text-[9px] uppercase tracking-[0.18em] text-ivory/40">Mar – Sáb · 10:00 – 20:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col gap-3 border-t border-gold/30 pt-6 text-[8px] uppercase tracking-[0.28em] text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Lila's Cakes · Todos los derechos reservados</p>
+        <p class="normal-case tracking-normal">Maqueta visual v5 — Boutique Parisina</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

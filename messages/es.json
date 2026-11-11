@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "catalog": "Catálogo",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Pastelería artesanal",
+    "subtitle": "Repostería hecha a diario con ingredientes frescos.",
+    "cta": "Ver el catálogo"
+  },
+  "theme": {
+    "toggle": "Cambiar tema"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Shop",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Artisan Bakery",
+    "subtitle": "Handcrafted baking made daily with fresh ingredients.",
+    "cta": "Browse the catalogue"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
