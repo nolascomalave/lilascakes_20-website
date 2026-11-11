@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lila's Cakes — Home Organic Modern (v4)</title>
+  <meta name="description" content="Maqueta visual v4 de la Home de Lila's Cakes. Minimalismo orgánico: crema, salvia y terracota." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#F9F6F0",
+            charcoal: "#2A2A2A",
+            sage: "#8A9A86",
+            "sage-deep": "#6F7D6B",
+            terracotta: "#D4A373",
+            sand: "#F3E7DA",
+            beige: "#F3EFE6",
+          },
+          fontFamily: {
+            sans: ["Outfit", "sans-serif"],
+            serif: ["Lora", "serif"],
+          },
+          boxShadow: {
+            organic: "0 30px 60px -30px rgba(42, 42, 42, 0.30)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f9f6f0;
+    }
+    /* Fundo suave si una imagen de Unsplash no carga */
+    .img-fallback {
+      background-image: linear-gradient(135deg, #e8e1d5 0%, #d9e0d6 60%, #e7cdb4 100%);
+    }
+    ::selection {
+      background-color: #d4a373;
+      color: #f9f6f0;
+    }
+  </style>
+</head>
+
+<body class="bg-cream font-sans font-light text-charcoal antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-cream/80 backdrop-blur-md">
+    <div class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-5 lg:px-10">
+
+      <!-- Logo -->
+      <a href="#" class="justify-self-start">
+        <span class="block font-serif text-2xl leading-none tracking-tight">Lila's Cakes</span>
+        <span class="mt-1.5 block text-[9px] uppercase tracking-[0.28em] text-sage">Panadería artesanal</span>
+      </a>
+
+      <!-- Navegación centrada -->
+      <nav class="hidden items-center gap-9 text-[13px] font-light tracking-wide text-charcoal/70 md:flex">
+        <a href="#" class="text-charcoal transition hover:text-sage">Inicio</a>
+        <a href="#productos" class="transition hover:text-sage">Productos</a>
+        <a href="#filosofia" class="transition hover:text-sage">Filosofía</a>
+        <a href="#instagram" class="transition hover:text-sage">Instagram</a>
+      </nav>
+
+      <!-- Acciones -->
+      <div class="flex items-center justify-self-end gap-3 sm:gap-4">
+        <button type="button" aria-label="Carrito" class="relative rounded-full p-2 text-charcoal/70 transition hover:bg-sage/10 hover:text-sage">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5">
+            <path d="M6 8h12l-1 12H7L6 8Z" stroke-linejoin="round" />
+            <path d="M9 8V6a3 3 0 0 1 6 0v2" stroke-linecap="round" />
+          </svg>
+          <span class="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-terracotta"></span>
+        </button>
+
+        <a
+          href="#productos"
+          class="hidden rounded-full bg-sage px-6 py-2.5 text-[12px] font-medium tracking-wide text-cream transition hover:bg-sage-deep sm:inline-flex"
+        >
+          Pedir online
+        </a>
+
+        <button type="button" aria-label="Abrir menú" class="rounded-full p-2 text-charcoal/70 transition hover:bg-sage/10 hover:text-sage md:hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="relative overflow-hidden">
+      <div class="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-sage/20 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-full bg-terracotta/10 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-6 pb-20 pt-12 lg:grid-cols-[6fr_5fr] lg:gap-20 lg:px-10 lg:pb-28 lg:pt-16">
+
+        <!-- Texto -->
+        <div>
+          <p class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.32em] text-sage">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-4 w-4">
+              <path d="M20 4c-6 0-12 3-12 10a6 6 0 0 0 6 6c7 0 10-6 10-16Z" stroke-linejoin="round" />
+              <path d="M8 20c1-5 4-9 8-11" stroke-linecap="round" />
+            </svg>
+            Pastelería artesanal · Madrid
+          </p>
+
+          <h1 class="mt-6 font-serif text-5xl leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.6rem]">
+            Hecho con
+            <br />
+            <em class="italic text-terracotta">amor</em> y harina
+          </h1>
+
+          <p class="mt-7 max-w-md text-[15px] font-light leading-relaxed text-charcoal/60">
+            Repostería honesta, de ingredientes puros y temporada. Horneamos
+            despacio, en pequeñas tandas, para que cada bocado sepa a casa.
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
+            <a
+              href="#productos"
+              class="inline-flex items-center gap-3 rounded-full bg-sage px-7 py-3.5 text-[12px] font-medium tracking-wide text-cream transition hover:bg-sage-deep"
+            >
+              Ver productos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-3.5 w-3.5">
+                <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a
+              href="#filosofia"
+              class="text-[12px] font-medium tracking-wide text-charcoal/60 underline decoration-sage/40 underline-offset-8 transition hover:text-sage"
+            >
+              Nuestra historia
+            </a>
+          </div>
+
+          <div class="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-charcoal/10 pt-6 text-[10px] uppercase tracking-[0.22em] text-charcoal/50">
+            <span class="inline-flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-sage"></span>
+              Ingredientes ecológicos
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-terracotta"></span>
+              Sin conservantes
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-sage"></span>
+              Horneado a diario
+            </span>
+          </div>
+        </div>
+
+        <!-- Imagen en arco -->
+        <div class="relative mx-auto w-full max-w-md">
+          <div class="pointer-events-none absolute -left-6 -top-6 hidden h-40 w-40 rounded-full border border-sage/30 sm:block"></div>
+          <div class="pointer-events-none absolute -bottom-4 -right-4 h-20 w-20 rounded-full bg-terracotta/20"></div>
+
+          <div class="img-fallback relative aspect-[4/5] overflow-hidden rounded-t-[999px] shadow-organic">
+            <img
+              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=80"
+              alt="Tarta rústica con frutos rojos"
+              class="h-full w-full object-cover"
+              onerror="this.style.display='none'"
+            />
+          </div>
+
+          <!-- Hoja decorativa -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="absolute -right-3 top-16 hidden h-10 w-10 rotate-12 text-sage sm:block">
+            <path d="M20 4c-6 0-12 3-12 10a6 6 0 0 0 6 6c7 0 10-6 10-16Z" stroke-linejoin="round" />
+            <path d="M8 20c1-5 4-9 8-11" stroke-linecap="round" />
+          </svg>
+
+          <p class="mt-5 text-center text-[10px] uppercase tracking-[0.24em] text-charcoal/40">
+            Tarta rústica de frutos rojos · de temporada
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTOS ===================== -->
+    <section id="productos" class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.32em] text-terracotta">La despensa</p>
+          <h2 class="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Nuestra selección</h2>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 text-[12px] font-medium tracking-wide text-charcoal/50 transition hover:text-sage"
+        >
+          Ver todo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-3.5 w-3.5">
+            <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Producto 1 -->
+        <article class="group">
+          <div class="img-fallback relative aspect-[4/5] overflow-hidden rounded-[2.5rem]">
+            <img
+              src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80"
+              alt="Tarta de frutos rojos"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-xl tracking-tight">Tarta de frutos rojos</h3>
+            <p class="text-sm tracking-wide text-terracotta">€34</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Bizcocho de almendra, crema fresca y fruta de temporada.
+          </p>
+        </article>
+
+        <!-- Producto 2 (desplazado) -->
+        <article class="group lg:mt-12">
+          <div class="img-fallback relative aspect-[3/4] overflow-hidden rounded-tl-[3.5rem] rounded-tr-[2rem] rounded-br-[3.5rem] rounded-bl-[2rem]">
+            <img
+              src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80"
+              alt="Cheesecake de maracuyá"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-xl tracking-tight">Cheesecake de maracuyá</h3>
+            <p class="text-sm tracking-wide text-terracotta">€28</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Base crujiente de avena y coulis tropical sin azúcar añadido.
+          </p>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="group">
+          <div class="img-fallback relative aspect-[4/5] overflow-hidden rounded-[2.5rem]">
+            <img
+              src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80"
+              alt="Brownie de cacao"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-xl tracking-tight">Brownie de cacao</h3>
+            <p class="text-sm tracking-wide text-terracotta">€12</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Cacao intenso, nueces tostadas y un centro tierno.
+          </p>
+        </article>
+
+        <!-- Producto 4 (desplazado) -->
+        <article class="group lg:mt-6">
+          <div class="img-fallback relative aspect-[3/4] overflow-hidden rounded-tl-[2rem] rounded-tr-[3.5rem] rounded-br-[2rem] rounded-bl-[3.5rem]">
+            <img
+              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=80"
+              alt="Tarta rústica de manzana"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-serif text-xl tracking-tight">Tarta de manzana</h3>
+            <p class="text-sm tracking-wide text-terracotta">€30</p>
+          </div>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-charcoal/50">
+            Manzana caramelizada, canela y masa quebrada de mantequilla.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== FILOSOFÍA ===================== -->
+    <section id="filosofia" class="bg-sand">
+      <div class="mx-auto max-w-3xl px-6 py-24 text-center lg:py-32">
+
+        <!-- Hoja botánica -->
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-sage/20 text-sage">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="h-7 w-7">
+            <path d="M20 4c-6 0-12 3-12 10a6 6 0 0 0 6 6c7 0 10-6 10-16Z" stroke-linejoin="round" />
+            <path d="M8 20c1-5 4-9 8-11" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <p class="mt-6 text-[10px] uppercase tracking-[0.32em] text-sage">Nuestra filosofía</p>
+
+        <h2 class="mt-4 font-serif text-4xl leading-tight tracking-tight sm:text-5xl">
+          Ingredientes puros,<br /> tiempos lentos
+        </h2>
+
+        <!-- Línea ondulada -->
+        <svg viewBox="0 0 120 12" fill="none" stroke="currentColor" stroke-width="1.5" class="mx-auto mt-8 h-3 w-28 text-terracotta">
+          <path d="M2 6c8-6 12 6 20 0s12 6 20 0 12 6 20 0 12 6 20 0 12 6 20 0" stroke-linecap="round" />
+        </svg>
+
+        <p class="mx-auto mt-8 max-w-xl text-[15px] font-light leading-relaxed text-charcoal/60">
+          Elegimos cada ingrediente por su origen y su sabor, nunca por la
+          rapidez. Trabajamos con harinas molidas a la piedra, huevos de
+          corral y fruta que cambia con las estaciones. Lo demás es paciencia.
+        </p>
+
+        <p class="mt-7 font-serif text-sm italic text-charcoal/40">— Lila, fundadora</p>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section id="instagram" class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.32em] text-terracotta">@lilascakes</p>
+          <h2 class="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Comparte el momento</h2>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 text-[12px] font-medium tracking-wide text-charcoal/50 transition hover:text-sage"
+        >
+          Síguenos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-3.5 w-3.5">
+            <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6 lg:gap-7">
+        <!-- Círculo 1 -->
+        <a href="#" class="group relative aspect-square overflow-hidden rounded-full img-fallback ring-1 ring-sage/30">
+          <img
+            src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=700&q=80"
+            alt="Cupcakes artesanales"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+        </a>
+        <!-- Círculo 2 -->
+        <a href="#" class="group relative aspect-square overflow-hidden rounded-full img-fallback ring-1 ring-sage/30">
+          <img
+            src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=700&q=80"
+            alt="Tarta de celebración"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+        </a>
+        <!-- Círculo 3 -->
+        <a href="#" class="group relative aspect-square overflow-hidden rounded-full img-fallback ring-1 ring-sage/30">
+          <img
+            src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=700&q=80"
+            alt="Tarta con flores"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+        </a>
+        <!-- Círculo 4 -->
+        <a href="#" class="group relative aspect-square overflow-hidden rounded-full img-fallback ring-1 ring-sage/30">
+          <img
+            src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=700&q=80"
+            alt="Detalle de repostería"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+        </a>
+        <!-- Círculo 5 -->
+        <a href="#" class="group relative aspect-square overflow-hidden rounded-full img-fallback ring-1 ring-sage/30">
+          <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+            alt="Tarta de chocolate"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+        </a>
+        <!-- Círculo 6 -->
+        <a href="#" class="group relative aspect-square overflow-hidden rounded-full img-fallback ring-1 ring-sage/30">
+          <img
+            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80"
+            alt="Postre de temporada"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-sage-deep text-beige">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
+
+        <!-- Marca -->
+        <div>
+          <p class="font-serif text-3xl tracking-tight text-cream">Lila's Cakes</p>
+          <p class="mt-4 max-w-xs text-[13px] font-light leading-relaxed text-beige/70">
+            Repostería artesanal de ingredientes puros. Horneamos despacio, en
+            pequeñas tandas, en nuestro obrador de Madrid.
+          </p>
+
+          <div class="mt-8 flex items-center gap-3">
+            <a href="#" aria-label="Instagram" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-beige/30 text-beige/80 transition hover:border-beige hover:text-cream">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-beige/30 text-beige/80 transition hover:border-beige hover:text-cream">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M14 8.5V7c0-.6.4-1 1-1h2V3.5h-2.5C12 3.5 10.5 5 10.5 7v1.5H8V11h2.5v9H14v-9h2.6l.4-2.5H14z"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-beige/30 text-beige/80 transition hover:border-beige hover:text-cream">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.2-1.8 0-2.6l1.2-4.9s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.6 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.1c0 .2-.2.3-.4.2-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.6-6.1 3.5 0 6.2 2.5 6.2 5.8 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 2-1.2 2.6A9 9 0 1 0 12 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Productos -->
+        <div>
+          <p class="text-[9px] uppercase tracking-[0.28em] text-beige/60">Productos</p>
+          <ul class="mt-5 space-y-3 text-[13px] font-light text-beige/70">
+            <li><a href="#productos" class="transition hover:text-cream">Tartas</a></li>
+            <li><a href="#productos" class="transition hover:text-cream">Cheesecakes</a></li>
+            <li><a href="#productos" class="transition hover:text-cream">Bollería</a></li>
+            <li><a href="#productos" class="transition hover:text-cream">Ediciones limitadas</a></li>
+          </ul>
+        </div>
+
+        <!-- Casa -->
+        <div>
+          <p class="text-[9px] uppercase tracking-[0.28em] text-beige/60">La casa</p>
+          <ul class="mt-5 space-y-3 text-[13px] font-light text-beige/70">
+            <li><a href="#filosofia" class="transition hover:text-cream">Nuestra historia</a></li>
+            <li><a href="#filosofia" class="transition hover:text-cream">El obrador</a></li>
+            <li><a href="#" class="transition hover:text-cream">Prensa</a></li>
+            <li><a href="#" class="transition hover:text-cream">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <p class="text-[9px] uppercase tracking-[0.28em] text-beige/60">Contacto</p>
+          <ul class="mt-5 space-y-3 text-[13px] font-light text-beige/70">
+            <li><a href="mailto:hola@lilas-cakes.com" class="transition hover:text-cream">hola@lilas-cakes.com</a></li>
+            <li>+34 600 000 000</li>
+            <li>Calle del Horno, 12<br />Madrid, España</li>
+            <li class="pt-2 text-[10px] uppercase tracking-[0.18em] text-beige/50">Mar – Sáb · 10:00 – 20:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col gap-3 border-t border-beige/20 pt-6 text-[10px] tracking-wide text-beige/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Lila's Cakes · Todos los derechos reservados</p>
+        <p>Maqueta visual v4 — Organic Modern</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

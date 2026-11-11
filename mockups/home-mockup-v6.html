@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lila's Cakes — Home Art Deco Noir (v6)</title>
+  <meta name="description" content="Maqueta visual v6 de la Home de Lila's Cakes. Art Deco Noir: opulencia geométrica, oro y dark mode." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: "#0F0C0B",
+            slate: "#161A1D",
+            ivory: "#F9F6F0",
+            gold: "#D4AF37",
+            blush: "#D8A7B1",
+          },
+          fontFamily: {
+            serif: ['"Bodoni Moda"', "serif"],
+            sans: ["Jost", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #0f0c0b;
+    }
+    /* Fundo elegante si una imagen de Unsplash no carga */
+    .img-fallback {
+      background-image: linear-gradient(135deg, #1d1714 0%, #241814 55%, #0f0c0b 100%);
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    ::selection {
+      background-color: #d4af37;
+      color: #0f0c0b;
+    }
+  </style>
+</head>
+
+<body class="bg-noir font-sans font-light text-ivory antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="bg-noir">
+    <div class="mx-auto grid max-w-[1500px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-5 lg:px-10">
+
+      <!-- Logo -->
+      <a href="#" class="justify-self-start">
+        <span class="block font-serif text-2xl leading-none tracking-wide text-ivory">Lila's Cakes</span>
+        <span class="mt-1.5 block text-[7px] uppercase tracking-[0.42em] text-gold">Maison de pâtisserie</span>
+      </a>
+
+      <!-- Navegación centrada -->
+      <nav class="hidden items-center gap-9 text-[9px] font-medium uppercase tracking-[0.34em] text-ivory/60 md:flex">
+        <a href="#" class="text-ivory transition hover:text-gold">Inicio</a>
+        <a href="#coleccion" class="transition hover:text-gold">Colección</a>
+        <a href="#filosofia" class="transition hover:text-gold">Filosofía</a>
+        <a href="#instagram" class="transition hover:text-gold">Instagram</a>
+      </nav>
+
+      <!-- Acciones -->
+      <div class="flex items-center justify-self-end gap-4">
+        <a
+          href="#coleccion"
+          class="hidden border border-gold bg-transparent px-5 py-2.5 text-[8px] font-medium uppercase tracking-[0.32em] text-ivory transition duration-300 hover:bg-gold hover:text-noir sm:inline-flex"
+        >
+          Pedir online
+        </a>
+        <button type="button" aria-label="Abrir menú" class="text-ivory/60 transition hover:text-gold md:hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-5 w-5">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Doble línea dorada de separación -->
+  <div aria-hidden="true">
+    <div class="h-px w-full bg-gold/60"></div>
+    <div class="h-[3px] w-full bg-noir"></div>
+    <div class="h-px w-full bg-gold/25"></div>
+  </div>
+
+  <main>
+    <!-- ===================== HERO SUPERPUESTO ===================== -->
+    <section class="relative overflow-hidden">
+      <div class="img-fallback absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1920&q=80"
+          alt="Tarta de chocolate oscuro"
+          class="h-full w-full object-cover"
+          onerror="this.style.display='none'"
+        />
+        <div class="absolute inset-0 bg-noir/70"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-noir/80 via-noir/30 to-noir"></div>
+      </div>
+
+      <!-- Textos verticales laterales -->
+      <p class="absolute left-5 top-1/2 hidden -translate-y-1/2 text-[8px] uppercase tracking-[0.5em] text-gold/60 lg:block [writing-mode:vertical-rl]">
+        Est. 2018 — Madrid
+      </p>
+      <p class="absolute right-5 top-1/2 hidden -translate-y-1/2 rotate-180 text-[8px] uppercase tracking-[0.5em] text-gold/60 lg:block [writing-mode:vertical-rl]">
+        Haute pâtisserie
+      </p>
+
+      <div class="relative mx-auto flex min-h-[92vh] max-w-[1500px] flex-col items-center justify-center px-6 py-20">
+
+        <!-- Rayos Art Deco -->
+        <svg viewBox="0 0 240 48" fill="none" stroke="currentColor" stroke-width="1" class="mb-8 h-10 w-56 text-gold/60" aria-hidden="true">
+          <path d="M120 46V2M120 46 78 6M120 46l42-40M120 46 40 18M120 46l80-28M120 46 16 36M120 46l104-10" stroke-linecap="round" />
+          <circle cx="120" cy="46" r="3" fill="currentColor" stroke="none" />
+        </svg>
+
+        <!-- Marco dorado doble con panel glass -->
+        <div class="relative w-full max-w-4xl border border-gold/70 p-2 sm:p-3">
+          <span class="absolute -left-1 -top-1 h-2 w-2 rotate-45 bg-gold"></span>
+          <span class="absolute -right-1 -top-1 h-2 w-2 rotate-45 bg-gold"></span>
+          <span class="absolute -bottom-1 -left-1 h-2 w-2 rotate-45 bg-gold"></span>
+          <span class="absolute -bottom-1 -right-1 h-2 w-2 rotate-45 bg-gold"></span>
+
+          <div class="border border-gold/30 bg-noir/60 px-6 py-12 text-center backdrop-blur-md sm:px-16 sm:py-16">
+            <p class="text-[9px] font-medium uppercase tracking-[0.45em] text-gold">
+              Maison de pâtisserie · Madrid
+            </p>
+
+            <h1 class="mt-7 font-serif text-5xl uppercase leading-[0.95] tracking-tight text-ivory sm:text-7xl lg:text-[6rem]">
+              El arte de la
+              <br />
+              <em class="italic text-gold">repostería</em>
+            </h1>
+
+            <div class="mx-auto mt-8 flex items-center justify-center gap-3" aria-hidden="true">
+              <span class="h-px w-16 bg-gold/60"></span>
+              <span class="h-1.5 w-1.5 rotate-45 bg-blush"></span>
+              <span class="h-px w-16 bg-gold/60"></span>
+            </div>
+
+            <p class="mx-auto mt-8 max-w-lg text-[13px] font-light leading-relaxed text-ivory/60">
+              Alta pastelería de autor. Chocolate de origen, fruta de temporada
+              y una puesta en escena que convierte cada postre en una joya.
+            </p>
+
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#coleccion"
+                class="border border-gold bg-gold px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-noir transition hover:bg-transparent hover:text-gold"
+              >
+                Explorar la colección
+              </a>
+              <a
+                href="#filosofia"
+                class="border border-gold/60 px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-ivory transition hover:border-gold hover:text-gold"
+              >
+                Nuestra filosofía
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-10 text-[8px] uppercase tracking-[0.45em] text-ivory/40">Desliza para descubrir</p>
+      </div>
+    </section>
+
+    <!-- ===================== COLECCIÓN (LOOKBOOK ESCALONADO) ===================== -->
+    <section id="coleccion" class="border-t border-gold/25 px-6 py-20 lg:px-10 lg:py-28">
+      <div class="mx-auto max-w-[1500px]">
+
+        <div class="text-center">
+          <p class="text-[9px] font-medium uppercase tracking-[0.45em] text-gold">La collection</p>
+          <h2 class="mt-4 font-serif text-5xl tracking-tight text-ivory sm:text-6xl">Piezas de autor</h2>
+          <div class="mx-auto mt-7 flex items-center justify-center gap-3" aria-hidden="true">
+            <span class="h-px w-14 bg-gold/60"></span>
+            <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
+            <span class="h-px w-14 bg-gold/60"></span>
+          </div>
+        </div>
+
+        <div class="mt-16 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Pieza 01 -->
+          <article class="group">
+            <div class="border border-gold bg-noir p-2">
+              <div class="img-fallback relative aspect-[3/4] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80"
+                  alt="Noir Chocolat"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <span class="absolute left-0 top-0 bg-noir/90 px-3 py-2 text-[8px] uppercase tracking-[0.34em] text-gold">Nº 01</span>
+              </div>
+            </div>
+            <div class="mt-5 flex items-baseline justify-between gap-4 border-b border-gold/25 pb-3">
+              <h3 class="font-serif text-2xl tracking-tight text-ivory">Noir Chocolat</h3>
+              <p class="text-[11px] uppercase tracking-[0.22em] text-gold">€46</p>
+            </div>
+            <p class="mt-3 text-[12px] font-light leading-relaxed text-ivory/50">
+              Chocolate 72%, cereza negra y cacao de origen.
+            </p>
+          </article>
+
+          <!-- Pieza 02 (escalonada) -->
+          <article class="group lg:mt-20">
+            <div class="border border-gold bg-noir p-2">
+              <div class="img-fallback relative aspect-[3/4] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1000&q=80"
+                  alt="Rouge Velours"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <span class="absolute left-0 top-0 bg-noir/90 px-3 py-2 text-[8px] uppercase tracking-[0.34em] text-gold">Nº 02</span>
+              </div>
+            </div>
+            <div class="mt-5 flex items-baseline justify-between gap-4 border-b border-gold/25 pb-3">
+              <h3 class="font-serif text-2xl tracking-tight text-ivory">Rouge Velours</h3>
+              <p class="text-[11px] uppercase tracking-[0.22em] text-gold">€42</p>
+            </div>
+            <p class="mt-3 text-[12px] font-light leading-relaxed text-ivory/50">
+              Terciopelo de frambuesa, rosa y vainilla de Madagascar.
+            </p>
+          </article>
+
+          <!-- Pieza 03 (escalonada) -->
+          <article class="group lg:mt-10">
+            <div class="border border-gold bg-noir p-2">
+              <div class="img-fallback relative aspect-[3/4] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80"
+                  alt="Or Noir"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <span class="absolute left-0 top-0 bg-noir/90 px-3 py-2 text-[8px] uppercase tracking-[0.34em] text-gold">Nº 03</span>
+              </div>
+            </div>
+            <div class="mt-5 flex items-baseline justify-between gap-4 border-b border-gold/25 pb-3">
+              <h3 class="font-serif text-2xl tracking-tight text-ivory">Or Noir</h3>
+              <p class="text-[11px] uppercase tracking-[0.22em] text-gold">€48</p>
+            </div>
+            <p class="mt-3 text-[12px] font-light leading-relaxed text-ivory/50">
+              Praliné de avellana, miel y hoja de oro comestible.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FILOSOFÍA (FONDO PIZARRA + RAYOS) ===================== -->
+    <section id="filosofia" class="relative overflow-hidden border-y border-gold/25 bg-slate">
+      <!-- Patrón geométrico Art Deco -->
+      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" fill="none" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
+        <g stroke="#D4AF37" stroke-width="1" opacity="0.08">
+          <path d="M600 600 0 0" />
+          <path d="M600 600 150 0" />
+          <path d="M600 600 300 0" />
+          <path d="M600 600 450 0" />
+          <path d="M600 600V0" />
+          <path d="M600 600 750 0" />
+          <path d="M600 600 900 0" />
+          <path d="M600 600 1050 0" />
+          <path d="M600 600 1200 0" />
+          <circle cx="600" cy="600" r="240" />
+          <circle cx="600" cy="600" r="400" />
+          <circle cx="600" cy="600" r="560" />
+        </g>
+      </svg>
+
+      <div class="relative mx-auto max-w-3xl px-6 py-24 text-center lg:py-32">
+
+        <div class="mx-auto flex items-center justify-center gap-3" aria-hidden="true">
+          <span class="h-px w-16 bg-gold/60"></span>
+          <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
+          <span class="h-px w-16 bg-gold/60"></span>
+        </div>
+
+        <p class="mt-7 text-[9px] font-medium uppercase tracking-[0.45em] text-gold">Nuestra filosofía</p>
+
+        <blockquote class="mx-auto mt-7 max-w-2xl font-serif text-4xl italic leading-tight tracking-tight text-ivory sm:text-5xl lg:text-6xl">
+          La perfección está en los detalles
+        </blockquote>
+
+        <p class="mx-auto mt-9 max-w-xl text-[13px] font-light leading-relaxed text-ivory/60">
+          Seleccionamos cada ingrediente como si fuera la última vez que vamos
+          a hornear. Sin conservantes, sin prisas y en pequeñas tandas: la
+          única forma que conocemos de hacer alta pastelería.
+        </p>
+
+        <div class="mx-auto mt-10 flex items-center justify-center gap-3" aria-hidden="true">
+          <span class="h-px w-16 bg-gold/60"></span>
+          <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
+          <span class="h-px w-16 bg-gold/60"></span>
+        </div>
+
+        <p class="mt-7 font-serif text-lg italic text-gold">— Lila, fundadora</p>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM (CARRUSEL) ===================== -->
+    <section id="instagram" class="px-6 py-20 lg:px-10 lg:py-28">
+      <div class="mx-auto max-w-[1500px]">
+
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-[9px] font-medium uppercase tracking-[0.45em] text-gold">@lilascakes</p>
+            <h2 class="mt-4 font-serif text-5xl leading-none tracking-tight text-ivory sm:text-6xl">
+              Comparte el <em class="italic">momento</em>
+            </h2>
+          </div>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.32em] text-ivory/50 transition hover:text-blush"
+          >
+            Síguenos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="h-3 w-3">
+              <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Carrusel horizontal -->
+        <div class="no-scrollbar mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+          <!-- Slide 1 -->
+          <a href="#" class="group relative w-64 shrink-0 snap-start overflow-hidden border border-gold/30 sm:w-72">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=800&q=80"
+                alt="Cupcakes artesanales"
+                class="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-noir/50 opacity-0 transition duration-500 group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-gold">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Slide 2 -->
+          <a href="#" class="group relative w-64 shrink-0 snap-start overflow-hidden border border-gold/30 sm:w-72">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80"
+                alt="Tarta de celebración"
+                class="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-noir/50 opacity-0 transition duration-500 group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-gold">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Slide 3 -->
+          <a href="#" class="group relative w-64 shrink-0 snap-start overflow-hidden border border-gold/30 sm:w-72">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80"
+                alt="Tarta con flores"
+                class="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-noir/50 opacity-0 transition duration-500 group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-gold">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Slide 4 -->
+          <a href="#" class="group relative w-64 shrink-0 snap-start overflow-hidden border border-gold/30 sm:w-72">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=800&q=80"
+                alt="Detalle de repostería"
+                class="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-noir/50 opacity-0 transition duration-500 group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-gold">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Slide 5 -->
+          <a href="#" class="group relative w-64 shrink-0 snap-start overflow-hidden border border-gold/30 sm:w-72">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80"
+                alt="Bollería artesanal"
+                class="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-noir/50 opacity-0 transition duration-500 group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-gold">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Slide 6 -->
+          <a href="#" class="group relative w-64 shrink-0 snap-start overflow-hidden border border-gold/30 sm:w-72">
+            <div class="img-fallback aspect-[4/5] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80"
+                alt="Postre de temporada"
+                class="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-noir/50 opacity-0 transition duration-500 group-hover:opacity-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="h-6 w-6 text-gold">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <p class="mt-4 text-[8px] uppercase tracking-[0.4em] text-ivory/40">← Desliza para ver más →</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-gold/50 bg-noir">
+    <div class="mx-auto max-w-[1500px] px-6 py-16 lg:px-10 lg:py-20">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-gold/25">
+
+        <!-- Marca -->
+        <div class="lg:pr-10">
+          <p class="font-serif text-3xl tracking-wide text-ivory">Lila's Cakes</p>
+          <p class="mt-2 text-[7px] uppercase tracking-[0.42em] text-gold">Maison de pâtisserie</p>
+          <p class="mt-5 max-w-xs text-[12px] font-light leading-relaxed text-ivory/50">
+            Alta pastelería contemporánea. Piezas de autor elaboradas en
+            pequeñas tandas en nuestro obrador de Madrid.
+          </p>
+
+          <div class="mt-7 flex items-center gap-3">
+            <a href="#" aria-label="Instagram" class="inline-flex h-9 w-9 items-center justify-center border border-gold/50 text-gold/80 transition hover:border-gold hover:text-gold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="inline-flex h-9 w-9 items-center justify-center border border-gold/50 text-gold/80 transition hover:border-gold hover:text-gold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M14 8.5V7c0-.6.4-1 1-1h2V3.5h-2.5C12 3.5 10.5 5 10.5 7v1.5H8V11h2.5v9H14v-9h2.6l.4-2.5H14z"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="inline-flex h-9 w-9 items-center justify-center border border-gold/50 text-gold/80 transition hover:border-gold hover:text-gold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.2-1.8 0-2.6l1.2-4.9s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.6 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.1c0 .2-.2.3-.4.2-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.6-6.1 3.5 0 6.2 2.5 6.2 5.8 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 2-1.2 2.6A9 9 0 1 0 12 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colección -->
+        <div class="lg:px-10">
+          <p class="text-[8px] font-medium uppercase tracking-[0.32em] text-gold">Colección</p>
+          <ul class="mt-5 space-y-3 text-[12px] font-light text-ivory/50">
+            <li><a href="#coleccion" class="transition hover:text-ivory">Tartas de autor</a></li>
+            <li><a href="#coleccion" class="transition hover:text-ivory">Bollería fina</a></li>
+            <li><a href="#coleccion" class="transition hover:text-ivory">Ediciones limitadas</a></li>
+            <li><a href="#coleccion" class="transition hover:text-ivory">Tarjetas regalo</a></li>
+          </ul>
+        </div>
+
+        <!-- Maison -->
+        <div class="lg:px-10">
+          <p class="text-[8px] font-medium uppercase tracking-[0.32em] text-gold">Maison</p>
+          <ul class="mt-5 space-y-3 text-[12px] font-light text-ivory/50">
+            <li><a href="#filosofia" class="transition hover:text-ivory">Nuestra historia</a></li>
+            <li><a href="#filosofia" class="transition hover:text-ivory">El obrador</a></li>
+            <li><a href="#" class="transition hover:text-ivory">Prensa</a></li>
+            <li><a href="#" class="transition hover:text-ivory">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="lg:pl-10">
+          <p class="text-[8px] font-medium uppercase tracking-[0.32em] text-gold">Contacto</p>
+          <ul class="mt-5 space-y-3 text-[12px] font-light text-ivory/50">
+            <li><a href="mailto:hola@lilas-cakes.com" class="transition hover:text-ivory">hola@lilas-cakes.com</a></li>
+            <li>+34 600 000 000</li>
+            <li>Calle del Horno, 12<br />Madrid, España</li>
+            <li class="pt-2 text-[9px] uppercase tracking-[0.2em] text-ivory/40">Mar – Sáb · 10:00 – 20:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col gap-3 border-t border-gold/25 pt-6 text-[8px] uppercase tracking-[0.28em] text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Lila's Cakes · Todos los derechos reservados</p>
+        <p class="normal-case tracking-normal">Maqueta visual v6 — Art Deco Noir</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
