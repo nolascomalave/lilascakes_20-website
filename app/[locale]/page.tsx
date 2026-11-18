@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element -- Placeholder images are external for this design pass */
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 
@@ -69,88 +69,71 @@ export default async function Home({ params }: Props) {
   const tCollection = await getTranslations({ locale, namespace: "collection" });
   const tPhilosophy = await getTranslations({ locale, namespace: "philosophy" });
   const tInstagram = await getTranslations({ locale, namespace: "instagram" });
+  const tBrand = await getTranslations({ locale, namespace: "brand" });
 
   return (
     <main id="top" className="flex-1">
 
-      {/* ===================== HERO ===================== */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={HERO_IMAGE}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-background/70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/30 to-background" />
-        </div>
+      {/* ===================== HERO SPLIT SCREEN ===================== */}
+      <section className="border-b border-line/25">
+        <div className="grid lg:min-h-[calc(100vh-7rem)] lg:grid-cols-2">
 
-        <div className="relative mx-auto flex min-h-[92vh] max-w-[1500px] flex-col items-center justify-center px-6 py-20">
-          {/* Rayos Art Deco */}
-          <svg
-            viewBox="0 0 240 48"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
-            className="mb-8 h-10 w-56 text-primary/60"
-            aria-hidden="true"
-          >
-            <path
-              d="M120 46V2M120 46 78 6M120 46l42-40M120 46 40 18M120 46l80-28M120 46 16 36M120 46l104-10"
-              strokeLinecap="round"
-            />
-            <circle cx="120" cy="46" r="3" fill="currentColor" stroke="none" />
-          </svg>
+          {/* Texto */}
+          <div className="flex flex-col justify-center px-6 py-16 sm:px-10 lg:px-14 lg:py-24 xl:px-20">
+            <p className="flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.42em] text-primary">
+              <span className="h-px w-8 bg-line/60" aria-hidden="true" />
+              {tHome("eyebrow")}
+            </p>
 
-          {/* Marco dorado doble con panel glass */}
-          <div className="relative w-full max-w-4xl border border-line/70 p-2 sm:p-3">
-            <span className="absolute -left-1 -top-1 h-2 w-2 rotate-45 bg-primary" />
-            <span className="absolute -right-1 -top-1 h-2 w-2 rotate-45 bg-primary" />
-            <span className="absolute -bottom-1 -left-1 h-2 w-2 rotate-45 bg-primary" />
-            <span className="absolute -bottom-1 -right-1 h-2 w-2 rotate-45 bg-primary" />
+            <h1 className="mt-8 font-serif text-[3.4rem] uppercase leading-[0.94] tracking-tight text-foreground sm:text-7xl lg:text-[5.4rem]">
+              {tHome("titleLine")}
+              <br />
+              <em className="italic text-primary">{tHome("titleAccent")}</em>
+            </h1>
 
-            <div className="border border-line/30 bg-background/60 px-6 py-12 text-center backdrop-blur-md sm:px-16 sm:py-16">
-              <p className="text-[9px] font-medium uppercase tracking-[0.45em] text-primary">
-                {tHome("eyebrow")}
-              </p>
+            <div className="mt-8 flex items-center gap-3" aria-hidden="true">
+              <span className="h-px w-14 bg-line/60" />
+              <span className="h-1.5 w-1.5 rotate-45 bg-primary" />
+              <span className="h-px w-14 bg-line/60" />
+            </div>
 
-              <h1 className="mt-7 font-serif text-5xl uppercase leading-[0.95] tracking-tight text-foreground sm:text-7xl lg:text-[6rem]">
-                {tHome("titleLine")}
-                <br />
-                <em className="italic text-primary">{tHome("titleAccent")}</em>
-              </h1>
+            <p className="mt-8 max-w-md text-[13px] font-light leading-relaxed text-foreground/60 sm:text-sm">
+              {tHome("description")}
+            </p>
 
-              <div className="mx-auto mt-8 flex items-center justify-center gap-3" aria-hidden="true">
-                <span className="h-px w-16 bg-line/60" />
-                <span className="h-1.5 w-1.5 rotate-45 bg-primary-soft" />
-                <span className="h-px w-16 bg-line/60" />
-              </div>
-
-              <p className="mx-auto mt-8 max-w-lg text-[13px] font-light leading-relaxed text-foreground/60">
-                {tHome("description")}
-              </p>
-
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a
-                  href="#coleccion"
-                  className="border border-primary bg-primary px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-background transition hover:bg-transparent hover:text-primary"
-                >
-                  {tHome("primaryCta")}
-                </a>
-                <a
-                  href="#filosofia"
-                  className="border border-line/60 px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-foreground transition hover:border-line hover:text-primary"
-                >
-                  {tHome("secondaryCta")}
-                </a>
-              </div>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#coleccion"
+                className="border border-primary bg-primary px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-background transition hover:bg-transparent hover:text-primary"
+              >
+                {tHome("primaryCta")}
+              </a>
+              <a
+                href="#filosofia"
+                className="border border-line/60 px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-foreground transition hover:border-line hover:text-primary"
+              >
+                {tHome("secondaryCta")}
+              </a>
             </div>
           </div>
 
-          <p className="mt-10 text-[8px] uppercase tracking-[0.45em] text-foreground/40">
-            {tHome("scrollHint")}
-          </p>
+          {/* Imagen edge-to-edge */}
+          <div className="relative min-h-[65vh] overflow-hidden lg:min-h-full">
+            <Image
+              src={HERO_IMAGE}
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/70 via-background/10 to-transparent lg:from-background/60" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+
+            <p className="absolute bottom-6 right-6 border border-line/40 bg-background/40 px-4 py-2 text-[8px] uppercase tracking-[0.3em] text-primary backdrop-blur-sm">
+              {tCollection("items.noir.name")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -177,11 +160,12 @@ export default async function Home({ params }: Props) {
               <article key={product.key} className={`group ${product.offset}`}>
                 <div className="border border-line bg-background p-2">
                   <div className="relative aspect-[3/4] overflow-hidden">
-                    <img
+                    <Image
                       src={product.image}
                       alt={tCollection(`items.${product.key}.name`)}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition duration-700 group-hover:scale-[1.04]"
                     />
                     <span className="absolute left-0 top-0 bg-background/90 px-3 py-2 text-[8px] uppercase tracking-[0.34em] text-primary">
                       {tCollection("itemNumber")} 0{index + 1}
@@ -206,61 +190,49 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      {/* ===================== FILOSOFÍA ===================== */}
+      {/* ===================== FILOSOFÍA (VINO) ===================== */}
       <section
         id="filosofia"
-        className="relative overflow-hidden border-y border-line/25 bg-surface"
+        className="border-y border-line/25 bg-surface"
       >
-        {/* Patrón geométrico Art Deco */}
-        <svg
-          viewBox="0 0 1200 600"
-          preserveAspectRatio="xMidYMax slice"
-          fill="none"
-          className="pointer-events-none absolute inset-0 h-full w-full"
-          aria-hidden="true"
-        >
-          <g stroke="currentColor" strokeWidth="1" opacity="0.08" className="text-primary">
-            <path d="M600 600 0 0" />
-            <path d="M600 600 150 0" />
-            <path d="M600 600 300 0" />
-            <path d="M600 600 450 0" />
-            <path d="M600 600V0" />
-            <path d="M600 600 750 0" />
-            <path d="M600 600 900 0" />
-            <path d="M600 600 1050 0" />
-            <path d="M600 600 1200 0" />
-            <circle cx="600" cy="600" r="240" />
-            <circle cx="600" cy="600" r="400" />
-            <circle cx="600" cy="600" r="560" />
-          </g>
-        </svg>
+        <div className="mx-auto max-w-[1500px] px-6 py-24 lg:px-10 lg:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_4fr_1fr] lg:gap-8">
 
-        <div className="relative mx-auto max-w-3xl px-6 py-24 text-center lg:py-32">
-          <Ornament />
+            {/* Etiqueta vertical izquierda */}
+            <p className="hidden text-[8px] uppercase tracking-[0.5em] text-foreground/30 lg:block [writing-mode:vertical-rl]">
+              {tPhilosophy("eyebrow")}
+            </p>
 
-          <p className="mt-7 text-[9px] font-medium uppercase tracking-[0.45em] text-primary">
-            {tPhilosophy("eyebrow")}
-          </p>
+            {/* Cita central */}
+            <div className="text-center">
+              <p className="text-[9px] font-medium uppercase tracking-[0.45em] text-primary">
+                {tPhilosophy("eyebrow")}
+              </p>
 
-          <blockquote className="mx-auto mt-7 max-w-2xl font-serif text-4xl italic leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            {tPhilosophy("quote")}
-          </blockquote>
+              <blockquote className="mx-auto mt-7 max-w-2xl font-serif text-4xl italic leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                {tPhilosophy("quote")}
+              </blockquote>
 
-          <p className="mx-auto mt-9 max-w-xl text-[13px] font-light leading-relaxed text-foreground/60">
-            {tPhilosophy("body")}
-          </p>
+              <div className="mx-auto mt-10 h-px w-24 bg-line/60" aria-hidden="true" />
 
-          <div className="mt-10">
-            <Ornament />
+              <p className="mx-auto mt-9 max-w-xl text-[13px] font-light leading-relaxed text-foreground/60">
+                {tPhilosophy("body")}
+              </p>
+
+              <p className="mt-8 font-serif text-lg italic text-primary">
+                {tPhilosophy("signature")}
+              </p>
+            </div>
+
+            {/* Etiqueta vertical derecha */}
+            <p className="hidden text-right text-[8px] uppercase tracking-[0.5em] text-foreground/30 lg:block [writing-mode:vertical-rl]">
+              {tBrand("tagline")}
+            </p>
           </div>
-
-          <p className="mt-7 font-serif text-lg italic text-primary">
-            {tPhilosophy("signature")}
-          </p>
         </div>
       </section>
 
-      {/* ===================== INSTAGRAM ===================== */}
+      {/* ===================== INSTAGRAM (GRID) ===================== */}
       <section id="instagram" className="px-6 py-20 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-[1500px]">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -287,6 +259,7 @@ export default async function Home({ params }: Props) {
                 stroke="currentColor"
                 strokeWidth="1.3"
                 className="h-3 w-3"
+                aria-hidden="true"
               >
                 <path
                   d="M4 12h15M13 6l6 6-6 6"
@@ -297,25 +270,29 @@ export default async function Home({ params }: Props) {
             </a>
           </div>
 
-          {/* Carrusel horizontal */}
-          <div className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {INSTAGRAM_IMAGES.map((image) => (
               <a
                 key={image}
                 href="#"
-                className="group relative w-64 shrink-0 snap-start overflow-hidden border border-line/30 sm:w-72"
+                className="group relative aspect-square overflow-hidden border border-line/30"
               >
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={image}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-full w-full object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
-                    loading="lazy"
-                  />
-                </div>
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                  className="object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"
+                />
                 <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/50 opacity-0 transition duration-500 group-hover:opacity-100">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6 text-primary" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    aria-hidden="true"
+                  >
                     <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                     <circle cx="12" cy="12" r="4" />
                     <circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none" />
@@ -324,10 +301,6 @@ export default async function Home({ params }: Props) {
               </a>
             ))}
           </div>
-
-          <p className="mt-4 text-[8px] uppercase tracking-[0.4em] text-foreground/40">
-            {tInstagram("scrollHint")}
-          </p>
         </div>
       </section>
     </main>

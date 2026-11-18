@@ -9,6 +9,14 @@ const nextConfig: NextConfig = withNextIntl({
   },
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
   turbopack: {
     root: process.cwd(),
     rules: {
