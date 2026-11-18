@@ -1,29 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff8f6;
-  --foreground: #4a2b23;
-  --primary: #f73e85;
-  --primary-soft: #f4b6c2;
-  --muted: #d1d3d4;
+  /* Tema claro (se conserva para el toggle de temas) */
+  --background: #f9f6f0;
+  --foreground: #1c1c1c;
+  --surface: #efeae2;
+  --primary: #b08d2e;
+  --primary-soft: #e5d6b0;
+  --accent: #c98b96;
+  --muted: #6b625c;
+  --line: #c9a75b;
 }
 
 .dark {
-  --background: #22100d;
-  --foreground: #f8e9e6;
-  --primary: #f73e85;
-  --primary-soft: #f4b6c2;
-  --muted: #6b4a41;
+  /* V3 Art Deco Noir */
+  --background: #0f0c0b;
+  --foreground: #f9f6f0;
+  --surface: #161a1d;
+  --primary: #d4af37;
+  --primary-soft: #d8a7b1;
+  --accent: #d8a7b1;
+  --muted: #9b8f8a;
+  --line: #d4af37;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
   --color-primary: var(--primary);
   --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
   --color-muted: var(--muted);
+  --color-line: var(--line);
   --font-sans: var(--font-montserrat);
-  --font-caveat: var(--font-caveat);
+  --font-serif: var(--font-bodoni);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -31,4 +42,15 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Carrusel horizontal sin barra visible */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

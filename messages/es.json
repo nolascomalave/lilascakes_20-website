@@ -2,17 +2,83 @@
   "nav": {
     "home": "Inicio",
     "catalog": "Catálogo",
-    "contact": "Contacto"
+    "collection": "Colección",
+    "philosophy": "Filosofía",
+    "instagram": "Instagram",
+    "contact": "Contacto",
+    "order": "Pedir online"
+  },
+  "brand": {
+    "tagline": "Maison de pâtisserie"
   },
   "home": {
     "title": "Pastelería artesanal",
     "subtitle": "Repostería hecha a diario con ingredientes frescos.",
-    "cta": "Ver el catálogo"
+    "cta": "Ver el catálogo",
+    "eyebrow": "Maison de pâtisserie · Madrid",
+    "titleLine": "El arte de la",
+    "titleAccent": "repostería",
+    "description": "Alta pastelería de autor. Chocolate de origen, fruta de temporada y una puesta en escena que convierte cada postre en una joya.",
+    "primaryCta": "Explorar la colección",
+    "secondaryCta": "Nuestra filosofía",
+    "scrollHint": "Desliza para descubrir"
+  },
+  "collection": {
+    "eyebrow": "La collection",
+    "title": "Piezas de autor",
+    "itemNumber": "Nº",
+    "items": {
+      "noir": {
+        "name": "Noir Chocolat",
+        "description": "Chocolate 72%, cereza negra y cacao de origen.",
+        "price": "€46"
+      },
+      "rouge": {
+        "name": "Rouge Velours",
+        "description": "Terciopelo de frambuesa, rosa y vainilla de Madagascar.",
+        "price": "€42"
+      },
+      "or": {
+        "name": "Or Noir",
+        "description": "Praliné de avellana, miel y hoja de oro comestible.",
+        "price": "€48"
+      }
+    }
+  },
+  "philosophy": {
+    "eyebrow": "Nuestra filosofía",
+    "quote": "La perfección está en los detalles",
+    "body": "Seleccionamos cada ingrediente como si fuera la última vez que vamos a hornear. Sin conservantes, sin prisas y en pequeñas tandas: la única forma que conocemos de hacer alta pastelería.",
+    "signature": "— Lila, fundadora"
+  },
+  "instagram": {
+    "eyebrow": "@lilascakes",
+    "titleStart": "Comparte el",
+    "titleAccent": "momento",
+    "subtitle": "El día a día del obrador, en imágenes.",
+    "follow": "Síguenos",
+    "scrollHint": "← Desliza para ver más →"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Maison de pâtisserie",
+    "description": "Alta pastelería contemporánea. Piezas de autor elaboradas en pequeñas tandas en nuestro obrador de Madrid.",
+    "collectionTitle": "Colección",
+    "collection1": "Tartas de autor",
+    "collection2": "Bollería fina",
+    "collection3": "Ediciones limitadas",
+    "collection4": "Tarjetas regalo",
+    "maisonTitle": "Maison",
+    "maison1": "Nuestra historia",
+    "maison2": "El obrador",
+    "maison3": "Prensa",
+    "maison4": "Trabaja con nosotros",
+    "contactTitle": "Contacto",
+    "phone": "+34 600 000 000",
+    "hours": "Mar – Sáb · 10:00 – 20:00",
+    "address": "Calle del Horno, 12 · Madrid, España"
   },
   "theme": {
     "toggle": "Cambiar tema"
-  },
-  "footer": {
-    "rights": "Todos los derechos reservados."
   }
 }

@@ -15,15 +15,15 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="inline-flex items-center gap-1 rounded-full border border-solid border-black/[.08] p-1 dark:border-white/[.145]">
+    <div className="inline-flex items-center border border-line/50">
       {LOCALES.map((nextLocale) => (
         <button
           key={nextLocale}
           type="button"
-          className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
+          className={`px-2.5 py-1.5 text-[9px] font-medium uppercase tracking-[0.2em] transition ${
             locale === nextLocale
-              ? "bg-primary text-white"
-              : "text-foreground hover:bg-black/[.04] dark:hover:bg-white/[.08]"
+              ? "bg-primary text-background"
+              : "text-foreground/60 hover:text-primary"
           }`}
           onClick={() => switchTo(nextLocale)}
         >

@@ -2,17 +2,83 @@
   "nav": {
     "home": "Home",
     "catalog": "Shop",
-    "contact": "Contact"
+    "collection": "Collection",
+    "philosophy": "Philosophy",
+    "instagram": "Instagram",
+    "contact": "Contact",
+    "order": "Order online"
+  },
+  "brand": {
+    "tagline": "Maison de pâtisserie"
   },
   "home": {
     "title": "Artisan Bakery",
     "subtitle": "Handcrafted baking made daily with fresh ingredients.",
-    "cta": "Browse the catalogue"
+    "cta": "Browse the catalogue",
+    "eyebrow": "Maison de pâtisserie · Madrid",
+    "titleLine": "The art of",
+    "titleAccent": "pâtisserie",
+    "description": "High-end author patisserie. Single-origin chocolate, seasonal fruit and a sense of occasion that turns every dessert into a jewel.",
+    "primaryCta": "Explore the collection",
+    "secondaryCta": "Our philosophy",
+    "scrollHint": "Scroll to discover"
+  },
+  "collection": {
+    "eyebrow": "La collection",
+    "title": "Signature pieces",
+    "itemNumber": "No.",
+    "items": {
+      "noir": {
+        "name": "Noir Chocolat",
+        "description": "72% chocolate, black cherry and single-origin cocoa.",
+        "price": "€46"
+      },
+      "rouge": {
+        "name": "Rouge Velours",
+        "description": "Raspberry velvet, rose and Madagascar vanilla.",
+        "price": "€42"
+      },
+      "or": {
+        "name": "Or Noir",
+        "description": "Hazelnut praline, honey and edible gold leaf.",
+        "price": "€48"
+      }
+    }
+  },
+  "philosophy": {
+    "eyebrow": "Our philosophy",
+    "quote": "Perfection lies in the details",
+    "body": "We choose every ingredient as if it were the last time we would ever bake. No preservatives, no rush, small batches: the only way we know to make high patisserie.",
+    "signature": "— Lila, founder"
+  },
+  "instagram": {
+    "eyebrow": "@lilascakes",
+    "titleStart": "Share the",
+    "titleAccent": "moment",
+    "subtitle": "The day-to-day life of the workshop, in pictures.",
+    "follow": "Follow us",
+    "scrollHint": "← Scroll to see more →"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Maison de pâtisserie",
+    "description": "Contemporary high patisserie. Signature pieces made in small batches in our Madrid workshop.",
+    "collectionTitle": "Collection",
+    "collection1": "Signature cakes",
+    "collection2": "Fine pastries",
+    "collection3": "Limited editions",
+    "collection4": "Gift cards",
+    "maisonTitle": "Maison",
+    "maison1": "Our story",
+    "maison2": "The workshop",
+    "maison3": "Press",
+    "maison4": "Work with us",
+    "contactTitle": "Contact",
+    "phone": "+34 600 000 000",
+    "hours": "Tue – Sat · 10:00 – 20:00",
+    "address": "Calle del Horno, 12 · Madrid, Spain"
   },
   "theme": {
     "toggle": "Toggle theme"
-  },
-  "footer": {
-    "rights": "All rights reserved."
   }
 }

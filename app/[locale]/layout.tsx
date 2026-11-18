@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Caveat } from "next/font/google";
+import { Bodoni_Moda, Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
@@ -13,9 +13,11 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const caveat = Caveat({
-  variable: "--font-caveat",
+const bodoni = Bodoni_Moda({
+  variable: "--font-bodoni",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 type Props = LayoutProps<"/[locale]">;
@@ -44,12 +46,12 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${montserrat.variable} ${caveat.variable} h-full`}
+      className={`${montserrat.variable} ${bodoni.variable} h-full`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
