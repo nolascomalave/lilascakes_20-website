@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Bodoni_Moda, Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 import "../globals.css";
 import { siteConfig } from "@/config/site";
 import Header from "@/components/ui/header";
@@ -48,7 +48,10 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${montserrat.variable} ${bodoni.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col font-sans"
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
