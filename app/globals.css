@@ -3,13 +3,13 @@
 :root {
   /* Tema claro (se conserva para el toggle de temas) */
   --background: #f9f6f0;
-  --foreground: #1c1c1c;
+  --foreground: #111111;
   --surface: #efeae2;
-  --primary: #b08d2e;
+  --primary: #7a5f1f;
   --primary-soft: #e5d6b0;
   --accent: #c98b96;
-  --muted: #6b625c;
-  --line: #c9a75b;
+  --muted: #5f574f;
+  --line: #8a6b1f;
 }
 
 .dark {
@@ -39,10 +39,34 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-montserrat), sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Carrusel horizontal sin barra visible */

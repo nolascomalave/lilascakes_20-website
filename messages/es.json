@@ -1,49 +1,29 @@
 {
   "nav": {
     "home": "Inicio",
-    "catalog": "Catálogo",
-    "collection": "Colección",
     "philosophy": "Filosofía",
     "instagram": "Instagram",
     "contact": "Contacto",
-    "order": "Pedir online"
+    "whatsapp": "WhatsApp"
   },
   "brand": {
     "tagline": "Maison de pâtisserie"
   },
+  "a11y": {
+    "skipToContent": "Saltar al contenido"
+  },
+  "meta": {
+    "title": "Lila's Cakes — Pastelería artesanal en Turmero, Aragua",
+    "description": "Repostería artesanal en Turmero, Estado Aragua. Tartas, postres y encargos personalizados. Contáctanos por WhatsApp o correo.",
+    "imageAlt": "Tarta de chocolate artesanal de Lila's Cakes"
+  },
   "home": {
-    "title": "Pastelería artesanal",
-    "subtitle": "Repostería hecha a diario con ingredientes frescos.",
-    "cta": "Ver el catálogo",
-    "eyebrow": "Maison de pâtisserie · Madrid",
+    "eyebrow": "Maison de pâtisserie · Turmero",
     "titleLine": "El arte de la",
     "titleAccent": "repostería",
     "description": "Alta pastelería de autor. Chocolate de origen, fruta de temporada y una puesta en escena que convierte cada postre en una joya.",
-    "primaryCta": "Explorar la colección",
-    "secondaryCta": "Nuestra filosofía",
-    "scrollHint": "Desliza para descubrir"
-  },
-  "collection": {
-    "eyebrow": "La collection",
-    "title": "Piezas de autor",
-    "itemNumber": "Nº",
-    "items": {
-      "noir": {
-        "name": "Noir Chocolat",
-        "description": "Chocolate 72%, cereza negra y cacao de origen.",
-        "price": "€46"
-      },
-      "rouge": {
-        "name": "Rouge Velours",
-        "description": "Terciopelo de frambuesa, rosa y vainilla de Madagascar.",
-        "price": "€42"
-      },
-      "or": {
-        "name": "Or Noir",
-        "description": "Praliné de avellana, miel y hoja de oro comestible.",
-        "price": "€48"
-      }
-    }
+    "primaryCta": "Hablemos por WhatsApp",
+    "secondaryCta": "Nuestra filosofía"
   },
   "philosophy": {
     "eyebrow": "Nuestra filosofía",
@@ -56,27 +36,42 @@
     "titleStart": "Comparte el",
     "titleAccent": "momento",
     "subtitle": "El día a día del obrador, en imágenes.",
-    "follow": "Síguenos",
-    "scrollHint": "← Desliza para ver más →"
+    "follow": "Síguenos en Instagram"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos",
+    "subtitle": "Cuéntanos qué tienes en mente y te responderemos lo antes posible.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntanos qué necesitas...",
+    "submit": "Enviar mensaje",
+    "note": "Al enviar, se abrirá tu aplicación de correo con el mensaje preparado.",
+    "privacy": "Usaremos tus datos únicamente para responder a tu mensaje.",
+    "success": "Hemos preparado tu mensaje. Si no se abre el correo, escríbenos a {email}.",
+    "whatsappCta": "Escríbenos por WhatsApp",
+    "instagramCta": "Síguenos en Instagram",
+    "emailCta": "Escríbenos por correo",
+    "location": "Turmero, Estado Aragua, Venezuela",
+    "hours": "Mar – Sáb · 10:00 – 20:00 (hora de Venezuela)"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "tagline": "Maison de pâtisserie",
-    "description": "Alta pastelería contemporánea. Piezas de autor elaboradas en pequeñas tandas en nuestro obrador de Madrid.",
-    "collectionTitle": "Colección",
-    "collection1": "Tartas de autor",
-    "collection2": "Bollería fina",
-    "collection3": "Ediciones limitadas",
-    "collection4": "Tarjetas regalo",
-    "maisonTitle": "Maison",
-    "maison1": "Nuestra historia",
-    "maison2": "El obrador",
-    "maison3": "Prensa",
-    "maison4": "Trabaja con nosotros",
+    "description": "Alta pastelería contemporánea, elaborada en pequeñas tandas en nuestro obrador de Turmero.",
+    "exploreTitle": "Explorar",
+    "exploreHome": "Inicio",
+    "explorePhilosophy": "Filosofía",
+    "exploreInstagram": "Instagram",
+    "exploreContact": "Contacto",
+    "socialTitle": "Síguenos",
+    "socialInstagram": "Instagram",
+    "socialWhatsapp": "WhatsApp",
     "contactTitle": "Contacto",
-    "phone": "+34 600 000 000",
-    "hours": "Mar – Sáb · 10:00 – 20:00",
-    "address": "Calle del Horno, 12 · Madrid, España"
+    "hours": "Mar – Sáb · 10:00 – 20:00 (hora de Venezuela)",
+    "address": "Turmero, Estado Aragua · Venezuela"
   },
   "theme": {
     "toggle": "Cambiar tema"

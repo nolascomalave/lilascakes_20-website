@@ -1,64 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { siteConfig } from "@/config/site";
+import ContactForm from "@/components/ui/contact-form";
+import instagramData from "@/content/instagram.json";
 
 type Props = PageProps<"/[locale]">;
 
-type ProductKey = "noir" | "rouge" | "or";
-
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1920&q=80";
-
-const PRODUCTS: { key: ProductKey; image: string; offset: string }[] = [
-  {
-    key: "noir",
-    image:
-      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80",
-    offset: "",
-  },
-  {
-    key: "rouge",
-    image:
-      "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1000&q=80",
-    offset: "lg:mt-20",
-  },
-  {
-    key: "or",
-    image:
-      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80",
-    offset: "lg:mt-10",
-  },
-];
-
-const INSTAGRAM_IMAGES = [
-  "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80",
-];
-
-function Ornament() {
-  return (
-    <div className="flex items-center justify-center gap-3" aria-hidden="true">
-      <span className="h-px w-14 bg-line/60" />
-      <span className="h-1.5 w-1.5 rotate-45 bg-primary" />
-      <span className="h-px w-14 bg-line/60" />
-    </div>
-  );
-}
+const whatsappHref = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}`;
 
 export function generateStaticParams() {
   return [{ locale: "es" }, { locale: "en" }];
-}
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: siteConfig.name,
-    description: siteConfig.description,
-  };
 }
 
 export default async function Home({ params }: Props) {
@@ -66,15 +17,15 @@ export default async function Home({ params }: Props) {
   setRequestLocale(locale);
 
   const tHome = await getTranslations({ locale, namespace: "home" });
-  const tCollection = await getTranslations({ locale, namespace: "collection" });
   const tPhilosophy = await getTranslations({ locale, namespace: "philosophy" });
   const tInstagram = await getTranslations({ locale, namespace: "instagram" });
+  const tContact = await getTranslations({ locale, namespace: "contact" });
   const tBrand = await getTranslations({ locale, namespace: "brand" });
 
   return (
     <main id="top" className="flex-1">
 
-      {/* ===================== HERO SPLIT SCREEN ===================== */}
+      {/* ===================== HERO ===================== */}
       <section className="border-b border-line/25">
         <div className="grid lg:min-h-[calc(100vh-7rem)] lg:grid-cols-2">
 
@@ -103,7 +54,9 @@ export default async function Home({ params }: Props) {
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href="#coleccion"
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-primary bg-primary px-7 py-3.5 text-[9px] font-medium uppercase tracking-[0.32em] text-background transition hover:bg-transparent hover:text-primary"
               >
                 {tHome("primaryCta")}
@@ -120,7 +73,7 @@ export default async function Home({ params }: Props) {
           {/* Imagen edge-to-edge */}
           <div className="relative min-h-[65vh] overflow-hidden lg:min-h-full">
             <Image
-              src={HERO_IMAGE}
+              src={siteConfig.heroImage}
               alt=""
               fill
               priority
@@ -129,68 +82,11 @@ export default async function Home({ params }: Props) {
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/70 via-background/10 to-transparent lg:from-background/60" />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-
-            <p className="absolute bottom-6 right-6 border border-line/40 bg-background/40 px-4 py-2 text-[8px] uppercase tracking-[0.3em] text-primary backdrop-blur-sm">
-              {tCollection("items.noir.name")}
-            </p>
           </div>
         </div>
       </section>
 
-      {/* ===================== COLECCIÓN ===================== */}
-      <section
-        id="coleccion"
-        className="border-t border-line/25 px-6 py-20 lg:px-10 lg:py-28"
-      >
-        <div className="mx-auto max-w-[1500px]">
-          <div className="text-center">
-            <p className="text-[9px] font-medium uppercase tracking-[0.45em] text-primary">
-              {tCollection("eyebrow")}
-            </p>
-            <h2 className="mt-4 font-serif text-5xl tracking-tight text-foreground sm:text-6xl">
-              {tCollection("title")}
-            </h2>
-            <div className="mt-7">
-              <Ornament />
-            </div>
-          </div>
-
-          <div className="mt-16 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.map((product, index) => (
-              <article key={product.key} className={`group ${product.offset}`}>
-                <div className="border border-line bg-background p-2">
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <Image
-                      src={product.image}
-                      alt={tCollection(`items.${product.key}.name`)}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition duration-700 group-hover:scale-[1.04]"
-                    />
-                    <span className="absolute left-0 top-0 bg-background/90 px-3 py-2 text-[8px] uppercase tracking-[0.34em] text-primary">
-                      {tCollection("itemNumber")} 0{index + 1}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-5 flex items-baseline justify-between gap-4 border-b border-line/25 pb-3">
-                  <h3 className="font-serif text-2xl tracking-tight text-foreground">
-                    {tCollection(`items.${product.key}.name`)}
-                  </h3>
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-primary">
-                    {tCollection(`items.${product.key}.price`)}
-                  </p>
-                </div>
-                <p className="mt-3 text-[12px] font-light leading-relaxed text-foreground/50">
-                  {tCollection(`items.${product.key}.description`)}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===================== FILOSOFÍA (VINO) ===================== */}
+      {/* ===================== FILOSOFÍA ===================== */}
       <section
         id="filosofia"
         className="border-y border-line/25 bg-surface"
@@ -199,7 +95,7 @@ export default async function Home({ params }: Props) {
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_4fr_1fr] lg:gap-8">
 
             {/* Etiqueta vertical izquierda */}
-            <p className="hidden text-[8px] uppercase tracking-[0.5em] text-foreground/30 lg:block [writing-mode:vertical-rl]">
+            <p className="hidden text-[8px] uppercase tracking-[0.5em] text-foreground/60 lg:block [writing-mode:vertical-rl]">
               {tPhilosophy("eyebrow")}
             </p>
 
@@ -225,14 +121,14 @@ export default async function Home({ params }: Props) {
             </div>
 
             {/* Etiqueta vertical derecha */}
-            <p className="hidden text-right text-[8px] uppercase tracking-[0.5em] text-foreground/30 lg:block [writing-mode:vertical-rl]">
+            <p className="hidden text-right text-[8px] uppercase tracking-[0.5em] text-foreground/60 lg:block [writing-mode:vertical-rl]">
               {tBrand("tagline")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* ===================== INSTAGRAM (GRID) ===================== */}
+      {/* ===================== INSTAGRAM ===================== */}
       <section id="instagram" className="px-6 py-20 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-[1500px]">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -244,13 +140,15 @@ export default async function Home({ params }: Props) {
                 {tInstagram("titleStart")}{" "}
                 <em className="italic">{tInstagram("titleAccent")}</em>
               </h2>
-              <p className="mt-4 text-[13px] font-light text-foreground/50">
+              <p className="mt-4 text-[13px] font-light text-foreground/60">
                 {tInstagram("subtitle")}
               </p>
             </div>
             <a
-              href="#"
-              className="inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.32em] text-foreground/50 transition hover:text-primary-soft"
+              href={siteConfig.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.32em] text-foreground/60 transition hover:text-primary"
             >
               {tInstagram("follow")}
               <svg
@@ -271,10 +169,13 @@ export default async function Home({ params }: Props) {
           </div>
 
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {INSTAGRAM_IMAGES.map((image) => (
+            {instagramData.images.map((image) => (
               <a
                 key={image}
-                href="#"
+                href={siteConfig.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={tInstagram("follow")}
                 className="group relative aspect-square overflow-hidden border border-line/30"
               >
                 <Image
@@ -300,6 +201,67 @@ export default async function Home({ params }: Props) {
                 </span>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== CONTACTO ===================== */}
+      <section
+        id="contacto"
+        className="border-t border-line/25 px-6 py-20 lg:px-10 lg:py-28"
+      >
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-2 lg:gap-20">
+
+          {/* Texto y vías directas */}
+          <div>
+            <p className="text-[9px] font-medium uppercase tracking-[0.45em] text-primary">
+              {tContact("eyebrow")}
+            </p>
+            <h2 className="mt-4 font-serif text-5xl tracking-tight text-foreground sm:text-6xl">
+              {tContact("title")}
+            </h2>
+            <p className="mt-5 max-w-md text-[13px] font-light leading-relaxed text-foreground/60">
+              {tContact("subtitle")}
+            </p>
+
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-primary bg-primary px-6 py-3.5 text-[9px] font-medium uppercase tracking-[0.3em] text-background transition hover:bg-transparent hover:text-primary"
+              >
+                {tContact("whatsappCta")}
+              </a>
+              <a
+                href={siteConfig.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-line/60 px-6 py-3.5 text-[9px] font-medium uppercase tracking-[0.3em] text-foreground transition hover:border-line hover:text-primary"
+              >
+                {tContact("instagramCta")}
+              </a>
+            </div>
+
+            <div className="mt-9 border-t border-line/25 pt-6">
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-foreground/60 transition hover:text-primary"
+              >
+                {tContact("emailCta")}
+                <span className="normal-case tracking-normal text-foreground/60">
+                  · {siteConfig.email}
+                </span>
+              </a>
+              <p className="mt-3 text-[11px] font-light leading-relaxed text-foreground/60">
+                {tContact("location")} · {tContact("hours")}
+              </p>
+            </div>
+          </div>
+
+          {/* Formulario */}
+          <div className="border border-line/40 bg-background/40 p-6 sm:p-8">
+            <ContactForm />
           </div>
         </div>
       </section>

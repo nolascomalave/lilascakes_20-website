@@ -1,49 +1,29 @@
 {
   "nav": {
     "home": "Home",
-    "catalog": "Shop",
-    "collection": "Collection",
     "philosophy": "Philosophy",
     "instagram": "Instagram",
     "contact": "Contact",
-    "order": "Order online"
+    "whatsapp": "WhatsApp"
   },
   "brand": {
     "tagline": "Maison de pâtisserie"
   },
+  "a11y": {
+    "skipToContent": "Skip to content"
+  },
+  "meta": {
+    "title": "Lila's Cakes — Artisan Patisserie in Turmero, Aragua",
+    "description": "Artisan patisserie in Turmero, Aragua State. Cakes, desserts and custom orders. Contact us via WhatsApp or email.",
+    "imageAlt": "Lila's Cakes artisan chocolate cake"
+  },
   "home": {
-    "title": "Artisan Bakery",
-    "subtitle": "Handcrafted baking made daily with fresh ingredients.",
-    "cta": "Browse the catalogue",
-    "eyebrow": "Maison de pâtisserie · Madrid",
+    "eyebrow": "Maison de pâtisserie · Turmero",
     "titleLine": "The art of",
     "titleAccent": "pâtisserie",
     "description": "High-end author patisserie. Single-origin chocolate, seasonal fruit and a sense of occasion that turns every dessert into a jewel.",
-    "primaryCta": "Explore the collection",
-    "secondaryCta": "Our philosophy",
-    "scrollHint": "Scroll to discover"
-  },
-  "collection": {
-    "eyebrow": "La collection",
-    "title": "Signature pieces",
-    "itemNumber": "No.",
-    "items": {
-      "noir": {
-        "name": "Noir Chocolat",
-        "description": "72% chocolate, black cherry and single-origin cocoa.",
-        "price": "€46"
-      },
-      "rouge": {
-        "name": "Rouge Velours",
-        "description": "Raspberry velvet, rose and Madagascar vanilla.",
-        "price": "€42"
-      },
-      "or": {
-        "name": "Or Noir",
-        "description": "Hazelnut praline, honey and edible gold leaf.",
-        "price": "€48"
-      }
-    }
+    "primaryCta": "Chat on WhatsApp",
+    "secondaryCta": "Our philosophy"
   },
   "philosophy": {
     "eyebrow": "Our philosophy",
@@ -56,27 +36,42 @@
     "titleStart": "Share the",
     "titleAccent": "moment",
     "subtitle": "The day-to-day life of the workshop, in pictures.",
-    "follow": "Follow us",
-    "scrollHint": "← Scroll to see more →"
+    "follow": "Follow us on Instagram"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk",
+    "subtitle": "Tell us what you have in mind and we will get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell us what you need...",
+    "submit": "Send message",
+    "note": "When you send it, your email app will open with the message ready.",
+    "privacy": "We will only use your data to reply to your message.",
+    "success": "We have prepared your message. If your email app does not open, write to {email}.",
+    "whatsappCta": "Message us on WhatsApp",
+    "instagramCta": "Follow us on Instagram",
+    "emailCta": "Send us an email",
+    "location": "Turmero, Aragua State, Venezuela",
+    "hours": "Tue – Sat · 10:00 – 20:00 (Venezuela time)"
   },
   "footer": {
     "rights": "All rights reserved.",
-    "tagline": "Maison de pâtisserie",
-    "description": "Contemporary high patisserie. Signature pieces made in small batches in our Madrid workshop.",
-    "collectionTitle": "Collection",
-    "collection1": "Signature cakes",
-    "collection2": "Fine pastries",
-    "collection3": "Limited editions",
-    "collection4": "Gift cards",
-    "maisonTitle": "Maison",
-    "maison1": "Our story",
-    "maison2": "The workshop",
-    "maison3": "Press",
-    "maison4": "Work with us",
+    "description": "Contemporary high patisserie, made in small batches in our workshop in Turmero.",
+    "exploreTitle": "Explore",
+    "exploreHome": "Home",
+    "explorePhilosophy": "Philosophy",
+    "exploreInstagram": "Instagram",
+    "exploreContact": "Contact",
+    "socialTitle": "Follow",
+    "socialInstagram": "Instagram",
+    "socialWhatsapp": "WhatsApp",
     "contactTitle": "Contact",
-    "phone": "+34 600 000 000",
-    "hours": "Tue – Sat · 10:00 – 20:00",
-    "address": "Calle del Horno, 12 · Madrid, Spain"
+    "hours": "Tue – Sat · 10:00 – 20:00 (Venezuela time)",
+    "address": "Turmero, Aragua State · Venezuela"
   },
   "theme": {
     "toggle": "Toggle theme"

@@ -4,6 +4,8 @@ import { Link } from "@/i18n/navigation";
 import ThemeToggle from "./theme-toggle";
 import LanguageSwitcher from "./language-switcher";
 
+const whatsappHref = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}`;
+
 export default async function Header() {
   const t = await getTranslations("nav");
   const brand = await getTranslations("brand");
@@ -27,14 +29,14 @@ export default async function Header() {
             <Link href="/" className="text-foreground transition hover:text-primary">
               {t("home")}
             </Link>
-            <a href="#coleccion" className="transition hover:text-primary">
-              {t("collection")}
-            </a>
             <a href="#filosofia" className="transition hover:text-primary">
               {t("philosophy")}
             </a>
             <a href="#instagram" className="transition hover:text-primary">
               {t("instagram")}
+            </a>
+            <a href="#contacto" className="transition hover:text-primary">
+              {t("contact")}
             </a>
           </nav>
 
@@ -42,10 +44,12 @@ export default async function Header() {
             <LanguageSwitcher />
             <ThemeToggle />
             <a
-              href="#coleccion"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-primary px-5 py-2.5 text-[8px] font-medium uppercase tracking-[0.32em] text-foreground transition hover:bg-primary hover:text-background"
             >
-              {t("order")}
+              {t("whatsapp")}
             </a>
           </div>
         </div>
@@ -71,20 +75,22 @@ export default async function Header() {
             <Link href="/" className="shrink-0 text-foreground">
               {t("home")}
             </Link>
-            <a href="#coleccion" className="shrink-0">
-              {t("collection")}
-            </a>
             <a href="#filosofia" className="shrink-0">
               {t("philosophy")}
             </a>
             <a href="#instagram" className="shrink-0">
               {t("instagram")}
             </a>
+            <a href="#contacto" className="shrink-0">
+              {t("contact")}
+            </a>
             <a
-              href="#coleccion"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-auto shrink-0 border border-primary px-3 py-1.5 text-foreground"
             >
-              {t("order")}
+              {t("whatsapp")}
             </a>
           </nav>
         </div>
