@@ -168,19 +168,19 @@ export default async function Home({ params }: Props) {
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {instagramData.images.map((image) => (
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {instagramData.images.filter(post => ((post.show as boolean) ?? true)).map((post) => (
               <a
-                key={image}
-                href={siteConfig.instagram}
+                key={post.href}
+                href={post.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={tInstagram("follow")}
+                aria-label={tInstagram("viewPost")}
                 className="group relative aspect-square overflow-hidden border border-line/30"
               >
                 <Image
-                  src={image}
-                  alt=""
+                  src={post.src}
+                  alt={tInstagram("imageAlt")}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                   className="object-cover brightness-75 grayscale transition duration-500 group-hover:brightness-100 group-hover:grayscale-0"

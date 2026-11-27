@@ -145,7 +145,13 @@ export default async function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-line/25 pt-6 text-[8px] uppercase tracking-[0.28em] text-foreground/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © 2026 {siteConfig.name} · {t("rights")}
+            © 2026 {siteConfig.name} · {t("rights")} ·{" "}
+            <Link
+              href="/legal"
+              className="underline decoration-line/40 underline-offset-4 transition hover:text-primary hover:decoration-primary"
+            >
+              {t("legal")}
+            </Link>
           </p>
           <p className="normal-case tracking-normal">{brand("tagline")}</p>
         </div>

@@ -126,6 +126,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${montserrat.variable} ${bodoni.variable} h-full`}
     >
       <body
@@ -146,7 +147,7 @@ export default async function LocaleLayout({
 
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { siteConfig } from "@/config/site";
+import { Link } from "@/i18n/navigation";
 
 const fieldClass =
   "mt-2 w-full border border-line/60 bg-background px-4 py-3 text-sm text-foreground placeholder:text-foreground/60 transition focus:border-primary";
@@ -15,6 +16,7 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [accepted, setAccepted] = useState(false);
   const [ready, setReady] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -26,6 +28,8 @@ export default function ContactForm() {
       `${t("email")}: ${email}`,
       "",
       message,
+      "",
+      t("consentLine"),
     ].join("\n");
 
     window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
@@ -77,6 +81,31 @@ export default function ContactForm() {
           placeholder={t("messagePlaceholder")}
           className={`${fieldClass} resize-none`}
         />
+      </label>
+
+      <label className="flex items-start gap-3 text-[11px] font-light leading-relaxed text-foreground/60">
+        <input
+          type="checkbox"
+          name="privacy-consent"
+          required
+          checked={accepted}
+          onChange={(event) => setAccepted(event.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-primary"
+        />
+        <span>
+          {t.rich("privacyConsent", {
+            link: (chunks) => (
+              <Link
+                href="/legal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline decoration-line/60 underline-offset-4 transition hover:text-primary"
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
+        </span>
       </label>
 
       <button

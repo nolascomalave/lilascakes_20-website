@@ -32,11 +32,13 @@
     "signature": "— Lila, founder"
   },
   "instagram": {
-    "eyebrow": "@lilascakes",
+    "eyebrow": "@lilascakes.20",
     "titleStart": "Share the",
     "titleAccent": "moment",
     "subtitle": "The day-to-day life of the workshop, in pictures.",
-    "follow": "Follow us on Instagram"
+    "follow": "Follow us on Instagram",
+    "imageAlt": "Lila's Cakes Instagram post",
+    "viewPost": "View post on Instagram"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -51,12 +53,232 @@
     "submit": "Send message",
     "note": "When you send it, your email app will open with the message ready.",
     "privacy": "We will only use your data to reply to your message.",
+    "privacyConsent": "I have read and accept the <link>privacy policy</link>.",
+    "consentLine": "Privacy consent: accepted.",
     "success": "We have prepared your message. If your email app does not open, write to {email}.",
     "whatsappCta": "Message us on WhatsApp",
     "instagramCta": "Follow us on Instagram",
     "emailCta": "Send us an email",
     "location": "Turmero, Aragua State, Venezuela",
     "hours": "Tue – Sat · 10:00 – 20:00 (Venezuela time)"
+  },
+  "legal": {
+    "eyebrow": "Legal information",
+    "title": "Legal notice and privacy",
+    "metaTitle": "Legal notice and privacy",
+    "metaDescription": "Legal notice, privacy policy, cookies and terms of use for Lila's Cakes in Turmero, Aragua State.",
+    "updated": "Last updated: November 24, 2026",
+    "draftNotice": "Test version. This document is an informational template and does not constitute legal advice. Its final content must be reviewed by a qualified attorney before publication.",
+    "intro": "This page brings together the legal notice, privacy policy, cookie information and terms of use for the Lila's Cakes website. By browsing the site or using the contact form, you accept the practices described in this document.",
+    "tocTitle": "Contents",
+    "backHome": "Back to home",
+    "sections": [
+      {
+        "id": "legal-notice",
+        "title": "1. Legal notice and identification of the owner",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This website is operated by Lila's Cakes, trade name of [legal entity pending], with tax ID (RIF) [pending], domiciled in Turmero, Aragua State, Venezuela."
+          },
+          {
+            "type": "p",
+            "text": "You can contact us at hola@lilas-cakes.com or via WhatsApp at +58 412-1485886. You can also find us on Instagram as @lilascakes.20."
+          },
+          {
+            "type": "p",
+            "text": "The site is informational and presents our artisan patisserie activity. It is not an online store and does not by itself formalise the purchase of products."
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "2. Privacy policy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The controller of your data is Lila's Cakes, using the contact details in the legal notice."
+          },
+          {
+            "type": "p",
+            "text": "Data we may process:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Data you provide in the contact form: name, email address and message.",
+              "Data you share when contacting us via WhatsApp or Instagram, such as your name, phone number or username and the content of the conversation. Those platforms also apply their own policies.",
+              "Technical connection data (IP address, browser, date and time) that the hosting provider may log for security reasons."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Purposes and legal bases:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Responding to your enquiries and information requests, based on your consent when submitting the form.",
+              "Managing orders or requests when you contact us through the indicated channels, based on your request and our legitimate interest in handling it.",
+              "Keeping the site secure and preventing abuse, based on our legitimate interest.",
+              "Complying with applicable legal obligations."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Retention: we will keep your data for as long as necessary to handle your request and, afterwards, for the applicable legal periods. As a reference, up to 12 months from the last communication, unless you request deletion earlier."
+          },
+          {
+            "type": "p",
+            "text": "Recipients: we do not sell your data. We may share it with the hosting and email provider that supports the service, and with WhatsApp/Meta or Instagram when you choose to contact us through those platforms. Some providers may be located outside Venezuela; in that case, their contractual safeguards and privacy policies apply."
+          },
+          {
+            "type": "p",
+            "text": "Rights: you may request access, rectification, erasure, objection, restriction or portability of your data, and withdraw your consent, by writing to hola@lilas-cakes.com. We will respond within a reasonable period. You may also contact the competent data protection authority in your country."
+          },
+          {
+            "type": "p",
+            "text": "Security: we apply reasonable technical and organisational measures to protect information. No system is completely infallible; if we detect a relevant incident, we will act in accordance with the law."
+          },
+          {
+            "type": "p",
+            "text": "Minors: the site is not directed at children under 18 and we do not knowingly collect their data. If you believe a minor has sent us information, please contact us so we can delete it."
+          },
+          {
+            "type": "p",
+            "text": "If you reside in the European Economic Area, you may exercise the rights granted by the General Data Protection Regulation (GDPR) to the extent applicable."
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "title": "3. Cookies and local storage",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This site only uses technical storage necessary for its operation:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "NEXT_LOCALE session cookie: stores your language preference (Spanish or English) while you browse. It is a functional cookie and is removed when you close your browser or clear cookies.",
+              "localStorage (theme): stores whether you prefer light or dark mode. It is not a cookie and remains in your browser until you clear it.",
+              "The site does not use analytics, advertising or third-party tracking cookies."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "You can clear or block these preferences in your browser settings. If you delete them, the site will detect the device language and system theme again."
+          },
+          {
+            "type": "p",
+            "text": "We do not show a cookie banner because we only use strictly necessary technical storage. If we introduce analytics or advertising in the future, we will update this policy and request the appropriate consent."
+          }
+        ]
+      },
+      {
+        "id": "terms",
+        "title": "4. Terms of use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Access to the site is free. You agree to use it lawfully, diligently and respectfully, without damaging its operation or the rights of third parties."
+          },
+          {
+            "type": "p",
+            "text": "Information about products, ingredients, availability and opening hours is indicative. Orders are arranged via WhatsApp or email, subject to confirmation, availability and agreed terms."
+          },
+          {
+            "type": "p",
+            "text": "No sales contract is formalised through this site. The final terms of each order are agreed directly with the owner."
+          }
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "title": "5. Intellectual property",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The texts, trade name, logo, design and photographs on the site belong to Lila's Cakes or are used with authorisation. Images published on Instagram are the property of their authors and are shown for informational purposes."
+          },
+          {
+            "type": "p",
+            "text": "Reproduction, distribution or transformation of these contents without prior authorisation is not permitted, except for uses allowed by law."
+          }
+        ]
+      },
+      {
+        "id": "third-party-links",
+        "title": "6. Third-party links",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The site includes links to WhatsApp and Instagram. These platforms have their own privacy policies and terms, which we do not control. We recommend reviewing them before sharing data."
+          },
+          {
+            "type": "p",
+            "text": "We are not responsible for the content, availability or practices of third-party sites."
+          }
+        ]
+      },
+      {
+        "id": "liability",
+        "title": "7. Limitation of liability",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We make reasonable efforts to keep information accurate and the site available, but we do not guarantee the absence of errors or interruptions."
+          },
+          {
+            "type": "p",
+            "text": "To the extent permitted by law, we accept no liability for damages arising from the use of the site or reliance on its content. Nothing in these terms limits the rights granted to users by consumer legislation."
+          }
+        ]
+      },
+      {
+        "id": "governing-law",
+        "title": "8. Governing law and jurisdiction",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "These terms are governed by the laws of the Bolivarian Republic of Venezuela. Any dispute will be submitted to the competent courts of Turmero, Aragua State, unless applicable law provides otherwise."
+          },
+          {
+            "type": "p",
+            "text": "If you access from another country, mandatory rules of your place of residence may also apply."
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "9. Changes to this document",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We may update this document to reflect changes to the site, services or regulations. We will publish the current version on this page with its update date."
+          },
+          {
+            "type": "p",
+            "text": "If changes are significant, we will try to inform you through the usual channels."
+          }
+        ]
+      },
+      {
+        "id": "legal-contact",
+        "title": "10. Contact",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For any questions about this document or your data, write to hola@lilas-cakes.com or via WhatsApp at +58 412-1485886."
+          },
+          {
+            "type": "p",
+            "text": "Address: Turmero, Aragua State, Venezuela. Instagram: @lilascakes.20."
+          }
+        ]
+      }
+    ]
   },
   "footer": {
     "rights": "All rights reserved.",
@@ -71,7 +293,8 @@
     "socialWhatsapp": "WhatsApp",
     "contactTitle": "Contact",
     "hours": "Tue – Sat · 10:00 – 20:00 (Venezuela time)",
-    "address": "Turmero, Aragua State · Venezuela"
+    "address": "Turmero, Aragua State · Venezuela",
+    "legal": "Legal notice & privacy"
   },
   "theme": {
     "toggle": "Toggle theme"

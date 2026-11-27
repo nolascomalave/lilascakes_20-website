@@ -32,11 +32,13 @@
     "signature": "— Lila, fundadora"
   },
   "instagram": {
-    "eyebrow": "@lilascakes",
+    "eyebrow": "@lilascakes.20",
     "titleStart": "Comparte el",
     "titleAccent": "momento",
     "subtitle": "El día a día del obrador, en imágenes.",
-    "follow": "Síguenos en Instagram"
+    "follow": "Síguenos en Instagram",
+    "imageAlt": "Publicación de Instagram de Lila's Cakes",
+    "viewPost": "Ver publicación en Instagram"
   },
   "contact": {
     "eyebrow": "Contacto",
@@ -51,12 +53,232 @@
     "submit": "Enviar mensaje",
     "note": "Al enviar, se abrirá tu aplicación de correo con el mensaje preparado.",
     "privacy": "Usaremos tus datos únicamente para responder a tu mensaje.",
+    "privacyConsent": "He leído y acepto la <link>política de privacidad</link>.",
+    "consentLine": "Consentimiento de privacidad: aceptado.",
     "success": "Hemos preparado tu mensaje. Si no se abre el correo, escríbenos a {email}.",
     "whatsappCta": "Escríbenos por WhatsApp",
     "instagramCta": "Síguenos en Instagram",
     "emailCta": "Escríbenos por correo",
     "location": "Turmero, Estado Aragua, Venezuela",
     "hours": "Mar – Sáb · 10:00 – 20:00 (hora de Venezuela)"
+  },
+  "legal": {
+    "eyebrow": "Información legal",
+    "title": "Aviso legal y privacidad",
+    "metaTitle": "Aviso legal y privacidad",
+    "metaDescription": "Aviso legal, política de privacidad, cookies y condiciones de uso de Lila's Cakes en Turmero, Estado Aragua.",
+    "updated": "Última actualización: 24 de noviembre de 2026",
+    "draftNotice": "Versión de prueba. Este documento es una plantilla informativa y no constituye asesoría legal. Su contenido definitivo debe ser revisado por un abogado cualificado antes de su publicación.",
+    "intro": "Esta página reúne el aviso legal, la política de privacidad, la información sobre cookies y las condiciones de uso del sitio web de Lila's Cakes. Al navegar por el sitio o utilizar el formulario de contacto, aceptas las prácticas descritas en este documento.",
+    "tocTitle": "Contenido",
+    "backHome": "Volver al inicio",
+    "sections": [
+      {
+        "id": "aviso-legal",
+        "title": "1. Aviso legal e identificación del titular",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Este sitio web es operado por Lila's Cakes, nombre comercial de [razón social pendiente], con RIF [pendiente] y domicilio en Turmero, Estado Aragua, Venezuela."
+          },
+          {
+            "type": "p",
+            "text": "Puedes contactarnos en hola@lilas-cakes.com o por WhatsApp al +58 412-1485886. También estamos en Instagram como @lilascakes.20."
+          },
+          {
+            "type": "p",
+            "text": "El sitio tiene carácter informativo y presenta la actividad de pastelería artesanal. No constituye una tienda online ni formaliza por sí mismo la compra de productos."
+          }
+        ]
+      },
+      {
+        "id": "privacidad",
+        "title": "2. Política de privacidad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "El responsable del tratamiento de tus datos es Lila's Cakes, con los datos de contacto indicados en el aviso legal."
+          },
+          {
+            "type": "p",
+            "text": "Datos que podemos tratar:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Datos que nos facilitas en el formulario de contacto: nombre, correo electrónico y mensaje.",
+              "Datos que compartes al contactarnos por WhatsApp o Instagram, como tu nombre, número o nombre de usuario y el contenido de la conversación. Esas plataformas aplican además sus propias políticas.",
+              "Datos técnicos de conexión (dirección IP, navegador, fecha y hora) que el proveedor de alojamiento pueda registrar por motivos de seguridad."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Finalidades y bases legales:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Responder a tus consultas y solicitudes de información, sobre la base de tu consentimiento al enviar el formulario.",
+              "Gestionar encargos o pedidos cuando nos contactas por los canales indicados, sobre la base de tu solicitud y del interés legítimo en atenderla.",
+              "Mantener la seguridad del sitio y prevenir abusos, sobre la base de nuestro interés legítimo.",
+              "Cumplir obligaciones legales que resulten aplicables."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Conservación: conservaremos tus datos durante el tiempo necesario para atender tu solicitud y, después, durante los plazos legales aplicables. Como referencia, hasta 12 meses desde la última comunicación, salvo que solicites su eliminación antes."
+          },
+          {
+            "type": "p",
+            "text": "Destinatarios: no vendemos tus datos. Podemos compartirlos con el proveedor de alojamiento y de correo electrónico que presta el servicio, y con WhatsApp/Meta o Instagram cuando eliges contactarnos por esas plataformas. Algunos proveedores pueden estar fuera de Venezuela; en ese caso se aplican sus garantías contractuales y políticas de privacidad."
+          },
+          {
+            "type": "p",
+            "text": "Derechos: puedes solicitar el acceso, la rectificación, la eliminación, la oposición, la limitación o la portabilidad de tus datos, así como retirar tu consentimiento, escribiendo a hola@lilas-cakes.com. Responderemos en un plazo razonable. También puedes acudir a la autoridad competente en materia de protección de datos de tu país."
+          },
+          {
+            "type": "p",
+            "text": "Seguridad: aplicamos medidas técnicas y organizativas razonables para proteger la información. Ningún sistema es completamente infalible; si detectamos un incidente relevante, actuaremos conforme a la ley."
+          },
+          {
+            "type": "p",
+            "text": "Menores: el sitio no está dirigido a menores de 18 años y no recopilamos conscientemente sus datos. Si crees que un menor nos ha enviado información, escríbenos para eliminarla."
+          },
+          {
+            "type": "p",
+            "text": "Si resides en el Espacio Económico Europeo, puedes ejercer los derechos que te reconoce el Reglamento General de Protección de Datos (RGPD) en la medida en que resulte aplicable."
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "title": "3. Cookies y almacenamiento local",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Este sitio utiliza únicamente almacenamiento técnico necesario para su funcionamiento:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Cookie de sesión NEXT_LOCALE: guarda tu preferencia de idioma (español o inglés) mientras navegas. Es una cookie funcional y se elimina al cerrar el navegador o al borrar las cookies.",
+              "localStorage (tema): guarda si prefieres el modo claro u oscuro. No es una cookie y permanece en tu navegador hasta que la borres.",
+              "El sitio no utiliza cookies de analítica, publicidad o seguimiento de terceros."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Puedes borrar o bloquear estas preferencias desde la configuración de tu navegador. Si las eliminas, el sitio volverá a detectar el idioma del dispositivo y el tema del sistema."
+          },
+          {
+            "type": "p",
+            "text": "No mostramos un banner de cookies porque solo usamos almacenamiento técnico necesario. Si en el futuro incorporamos analítica o publicidad, actualizaremos esta política y solicitaremos el consentimiento que corresponda."
+          }
+        ]
+      },
+      {
+        "id": "condiciones",
+        "title": "4. Condiciones de uso",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "El acceso al sitio es libre y gratuito. Te comprometes a utilizarlo de forma lícita, diligente y respetuosa, sin dañar su funcionamiento ni los derechos de terceros."
+          },
+          {
+            "type": "p",
+            "text": "La información sobre productos, ingredientes, disponibilidad y horarios es orientativa. Los encargos se concretan por WhatsApp o correo electrónico, sujetos a confirmación, disponibilidad y condiciones acordadas."
+          },
+          {
+            "type": "p",
+            "text": "No se formaliza ningún contrato de compraventa a través de este sitio. Las condiciones definitivas de cada pedido se acuerdan directamente con el titular."
+          }
+        ]
+      },
+      {
+        "id": "propiedad",
+        "title": "5. Propiedad intelectual",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Los textos, el nombre comercial, el logotipo, el diseño y las fotografías del sitio pertenecen a Lila's Cakes o se utilizan con autorización. Las imágenes publicadas en Instagram son propiedad de sus autores y se muestran con fines informativos."
+          },
+          {
+            "type": "p",
+            "text": "No se permite reproducir, distribuir ni transformar estos contenidos sin autorización previa, salvo los usos permitidos por la ley."
+          }
+        ]
+      },
+      {
+        "id": "enlaces",
+        "title": "6. Enlaces a terceros",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "El sitio incluye enlaces a WhatsApp e Instagram. Estas plataformas tienen sus propias políticas de privacidad y condiciones, que no controlamos. Te recomendamos revisarlas antes de compartir datos."
+          },
+          {
+            "type": "p",
+            "text": "No somos responsables del contenido, la disponibilidad o las prácticas de sitios de terceros."
+          }
+        ]
+      },
+      {
+        "id": "responsabilidad",
+        "title": "7. Limitación de responsabilidad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hacemos un esfuerzo razonable para que la información sea correcta y el sitio esté disponible, pero no garantizamos la ausencia de errores o interrupciones."
+          },
+          {
+            "type": "p",
+            "text": "En la medida permitida por la ley, no asumimos responsabilidad por daños derivados del uso del sitio o de la confianza en su contenido. Nada en estas condiciones limita los derechos que la legislación de consumo reconozca a los usuarios."
+          }
+        ]
+      },
+      {
+        "id": "legislacion",
+        "title": "8. Legislación aplicable y jurisdicción",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Estas condiciones se rigen por la legislación de la República Bolivariana de Venezuela. Cualquier controversia se someterá a los tribunales competentes de Turmero, Estado Aragua, salvo que la ley aplicable disponga otra cosa."
+          },
+          {
+            "type": "p",
+            "text": "Si accedes desde otro país, también pueden aplicarse normas imperativas de tu lugar de residencia."
+          }
+        ]
+      },
+      {
+        "id": "cambios",
+        "title": "9. Cambios en este documento",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Podemos actualizar este documento para reflejar cambios en el sitio, en los servicios o en la normativa. Publicaremos la versión vigente en esta página con su fecha de actualización."
+          },
+          {
+            "type": "p",
+            "text": "Si los cambios son significativos, procuraremos informarte por los canales habituales."
+          }
+        ]
+      },
+      {
+        "id": "contacto-legal",
+        "title": "10. Contacto",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Para cualquier duda sobre este documento o sobre tus datos, escríbenos a hola@lilas-cakes.com o por WhatsApp al +58 412-1485886."
+          },
+          {
+            "type": "p",
+            "text": "Dirección: Turmero, Estado Aragua, Venezuela. Instagram: @lilascakes.20."
+          }
+        ]
+      }
+    ]
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
@@ -71,7 +293,8 @@
     "socialWhatsapp": "WhatsApp",
     "contactTitle": "Contacto",
     "hours": "Mar – Sáb · 10:00 – 20:00 (hora de Venezuela)",
-    "address": "Turmero, Estado Aragua · Venezuela"
+    "address": "Turmero, Estado Aragua · Venezuela",
+    "legal": "Aviso legal y privacidad"
   },
   "theme": {
     "toggle": "Cambiar tema"
